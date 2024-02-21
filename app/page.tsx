@@ -146,10 +146,10 @@ export default function Home() {
       <div className="px-[22px] md:px-16 lg:px-28 pt-5 min-h-screen bg-primary">
         <Header color="secondary" />
         <div className="mt-12 mb-36 lg:mt-28 lg:mb-44 text-f-secondary">
-          <h1 className="mb-1.5 lg:mb-0.5 aqua-big-banner text-[38px] leading-[50px] lg:text-[120px] lg:leading-[135px] uppercase max-w-5xl">
+          <h1 className="mb-1.5 lg:mb-0.5 aqua-big-banner text-[42.5px] leading-[50px] lg:text-[120px] lg:leading-[135px] uppercase max-w-5xl">
             Ne soyez plus dans le flou
           </h1>
-          <h2 className="mb-14 aqua-title text-[13px] lg:text-[25px]">
+          <h2 className="mb-14 aqua-title text-[14px] lg:text-[25px]">
             La beauté est essentielle, la pertinence la valorise.
           </h2>
           <div className="flex flex-wrap gap-3 max-w-72 lg:max-w-none lg:gap-5">
@@ -164,7 +164,7 @@ export default function Home() {
           SCROLL
         </p>
       </div>
-      <div className="pt-11 pb-[26px] lg:pt-14 lg:pb-36 text-f-primary">
+      <div className="pt-11 pb-[26px] lg:pt-12 lg:pb-36 text-f-primary">
         <div className="px-[22px] md:px-16 lg:px-20 flex justify-between items-center">
           <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             Ce que je fais..

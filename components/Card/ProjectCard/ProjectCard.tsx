@@ -47,7 +47,10 @@ export function ProjectCard(props: ProjectCardProps) {
         className={`rounded-2xl ${img.objectFit} ${img.objectPosition}`}
         sizes="100% 100%"
       />
-      <div className="absolute rounded-2xl w-full h-full hover:backdrop-blur-[1px] hidden lg:block" />
+      {/* <div className="absolute rounded-2xl w-full h-full hover:backdrop-blur-[1px] hidden lg:block" /> */}
+      <div
+        className={`absolute rounded-2xl w-full h-full hidden lg:block hover:bg-black/10 transition-all duration-300 ease-in-out`}
+      />
       <div className="absolute bottom-4 left-5 transition-all duration-300 ease-in-out">
         <Button
           customClass="relative transiton-all duration-100"
