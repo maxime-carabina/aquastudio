@@ -164,7 +164,7 @@ export default function Home() {
           SCROLL
         </p>
       </div>
-      <div className="pt-11 pb-[26px] lg:pt-12 lg:pb-36 text-f-primary">
+      <div className="pt-[47px] pb-[26px] lg:pt-12 lg:pb-36 text-f-primary">
         <div className="px-[22px] md:px-16 lg:px-20 flex justify-between items-center">
           <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             Ce que je fais..
