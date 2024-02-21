@@ -18,6 +18,6 @@ jobs:
           node-version: 18
           cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm install
       - name: Run code formating and linting
         run: pnpm run fmt:check
