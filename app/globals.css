@@ -1,0 +1,117 @@
+@layer tailwind-base, aqua-custom-styles;
+@layer tailwind-base {
+  @tailwind base;
+  @tailwind components;
+}
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 248 243; /* #fff8f3 */
+
+    --blue: 10 32 241; /* #0a20f1 */
+    --creme: 255 248 243; /* #fff8f3 */
+
+    /* components: */
+    /* --c-default-1: #0a20f1;
+    --c-default-2: #fff8f3; */
+
+    --black: 0 0 0; /* #000000 */
+    --white: 255 255 255; /* #ffffff; */
+
+    --radius-5: 5px;
+    --radius-15: 15px;
+    --radius-20: 20px;
+
+    /* BASE COLORS */
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+@layer aqua-custom-styles {
+  .default-button {
+    @apply aqua-buttons min-w-fit w-full h-fit text-f-primary border-[.5px] rounded-[5px];
+  }
+
+  .default-primary {
+    @apply bg-primary text-f-secondary border-secondary
+          hover:text-f-primary
+          hover:shadow-[inset_16rem_0_0_0] hover:shadow-secondary duration-500 transition-[color,box-shadow];
+  }
+
+  .default-secondary {
+    @apply bg-secondary text-f-primary border-primary z-0
+        hover:text-f-secondary
+        hover:shadow-[inset_16rem_0_0_0] hover:shadow-primary duration-500 transition-[color,box-shadow];
+  }
+  /* before:transition ease-linear duration-200; */
+  /* duration-[400ms,700ms]  } */
+
+  .default-tertiary {
+    @apply bg-secondary text-f-primary border-tertiary;
+  }
+
+  .default-icon {
+    @apply w-16 h-16 text-f-secondary;
+  }
+
+  /* .default-tab {
+    @apply aqua-menu-default antialiased py-[5px] w-fit max-w-fit text-f-primary border-b-[1.5px] block;
+  } */
+
+  .default-tab {
+    @apply aqua-menu-default text-[12px] lg:text-[25px] antialiased py-[5px] text-f-primary relative cursor-pointer;
+  }
+
+  .default-tab::after {
+    @apply content-[''] h-[1.5px] w-0 bg-primary absolute left-0 bottom-0 transition-all duration-[550ms] pointer-events-none;
+  }
+
+  .default-tab:hover::after,
+  .default-tab:active::after {
+    @apply w-full;
+  }
+
+  .default-tab-active::after {
+    /* @apply aqua-menu-active antialiased border-primary border-b-[1.5px]; */
+    @apply content-[''] h-[1.5px] w-full bg-primary absolute left-0 bottom-0 pointer-events-none;
+  }
+
+  .default-navbar {
+    @apply aqua-caption antialiased px-3 py-1 w-fit text-f-primary
+    hover:text-f-secondary;
+    /* hover:bg-primary hover:rounded-[5px]; hover:bg-primary hover:rounded-[5px]; */
+  }
+
+  .default-navbar-active {
+    @apply text-f-secondary bg-primary rounded-[2.5px];
+  }
+}
+
+/* Gotham */
+@font-face {
+  font-family: 'Gotham';
+  src: url('../public/fonts/Gotham-Font/Gotham-Black.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../public/fonts/Gotham-Font/Gotham-Bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../public/fonts/Gotham-Font/Gotham-Book.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../public/fonts/Gotham-Font/Gotham-Light.otf');
+  font-weight: 500;
+  /* font-style: normal; */
+}
