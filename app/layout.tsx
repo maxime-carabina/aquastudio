@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 import { Footer } from '@/components';
@@ -8,6 +8,13 @@ import { Footer } from '@/components';
 export const metadata: Metadata = {
   title: 'AquaStudio',
   description: 'AquaStudio is a web-based portfolio.',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
