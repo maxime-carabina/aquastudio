@@ -165,7 +165,7 @@ export default function Home() {
         </p>
       </div>
       <div className="pt-11 pb-[26px] lg:pt-12 lg:pb-36 text-f-primary">
-        <div className="px-[22px] md:px-16 lg:px-20 flex justify-between items-center">
+        <div className="mb-5 md:mb-0 px-[22px] md:px-16 lg:px-20 flex justify-between items-center">
           <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             Ce que je fais..
           </h1>
@@ -173,13 +173,11 @@ export default function Home() {
             Voir tous les projets
           </Button>
         </div>
-        <div className="mt-5 md:mt-0">
-          <Tabs
-            customClass="px-[22px] lg:px-20"
-            defaultIndex={0}
-            tabsConfig={tabsConfig}
-          />
-        </div>
+        <Tabs
+          customClass="px-[22px] lg:px-20"
+          defaultIndex={0}
+          tabsConfig={tabsConfig}
+        />
       </div>
       <div className="px-[22px] pt-11 md:px-16 lg:px-20 lg:pt-12 bg-primary text-f-secondary">
         <div className="mb-5 lg:mb-12 flex justify-between items-center">
