@@ -4,6 +4,11 @@ import { useState } from 'react';
 
 import Link from 'next/link';
 
+// import { gsap } from 'gsap';
+// import { Flip } from 'gsap/Flip';
+
+// gsap.registerPlugin(Flip);
+
 type NavBarProps = {
   defaultIndex?: number;
 };
@@ -35,7 +40,7 @@ type LinksHovered = {
 export function NavBar(props: NavBarProps) {
   const { defaultIndex = 0 } = props;
 
-  const [selectedIndex, setSelectedIndex] = useState(defaultIndex);
+  const [selectedIndex, setSelectedIndex] = useState<number>(defaultIndex);
   const [linksHovered, setLinksHovered] = useState<LinksHovered[]>([
     { id: 0, isHovered: false },
     { id: 1, isHovered: false },
@@ -56,7 +61,7 @@ export function NavBar(props: NavBarProps) {
         {LINKS.map((link, index) => (
           <Link
             key={`link-${index}`}
-            className={`default-navbar aqua-buttons h-10 max-w-full leading-[0px] relative flex items-center
+            className={`default-navbar aqua-buttons text-[13px] leading-[0px] lg:text-[20px] lg:leading-[21.24px] h-7 lg:h-10 max-w-full relative flex items-center
               ${
                 index === selectedIndex &&
                 !linksHovered.some((link) => link.isHovered) &&
@@ -65,25 +70,23 @@ export function NavBar(props: NavBarProps) {
             `}
             href={link.href}
             onClick={() => handleClick(index)}
-            onMouseOver={() =>
+            onMouseOver={() => {
               setLinksHovered((prev) =>
                 prev.map((link) =>
                   link.id === index ? { ...link, isHovered: true } : link,
                 ),
-              )
-            }
-            onMouseOut={() =>
+              );
+            }}
+            onMouseOut={() => {
               setLinksHovered((prev) =>
                 prev.map((link) =>
                   link.id === index ? { ...link, isHovered: false } : link,
                 ),
-              )
-            }
+              );
+            }}
           >
             <div className="relative inline-block z-20">{link.label}</div>
-            {linksHovered[index].isHovered && (
-              <div className="absolute z-10 top-0 left-0 right-0 bottom-0 w-full h-full bg-primary rounded-[2.5px] transition-all" />
-            )}
+            {linksHovered[index].isHovered && <div className="menu-shape" />}
           </Link>
         ))}
       </div>
