@@ -3,7 +3,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
-import { Footer } from '@/components';
+import { Footer, SmoothScroller, NavBar } from '@/components';
 
 export const metadata: Metadata = {
   title: 'AquaStudio',
@@ -40,9 +40,10 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-background max-w-screen-2xl m-auto">
+        <SmoothScroller />
         {children}
         <Footer />
-        {/* <NavBar /> */}
+        <NavBar />
       </body>
     </html>
   );
