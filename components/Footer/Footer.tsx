@@ -54,7 +54,7 @@ export function Footer() {
           </li>
         </ul>
       </div>
-      <div className="max-w-lg w-full">
+      <div className="max-w-lg w-full mb-20 lg:mb-0">
         <div className="mb-3 flex items-center justify-between aqua-caption text-[12px] leading-[20px] lg:text-[20px] lg:leading-[75px]">
           <p>C’est l’heure de tenter l’expérience !</p>
           <Time time={time} />
