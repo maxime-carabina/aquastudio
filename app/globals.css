@@ -38,13 +38,14 @@
   .default-primary {
     @apply bg-primary text-f-secondary border-secondary
           hover:text-f-primary
-          hover:shadow-[inset_16rem_0_0_0] hover:shadow-secondary duration-500 transition-[color,box-shadow];
+          hover:shadow-[inset_25rem_0_0_0] hover:shadow-secondary duration-500 transition-[color,box-shadow];
+    /* hover:shadow-[inset_16rem_0_0_0] */
   }
 
   .default-secondary {
     @apply bg-secondary text-f-primary border-primary z-0
         hover:text-f-secondary
-        hover:shadow-[inset_16rem_0_0_0] hover:shadow-primary duration-500 transition-[color,box-shadow];
+        hover:shadow-[inset_25rem_0_0_0] hover:shadow-primary duration-500 transition-[color,box-shadow];
   }
   /* before:transition ease-linear duration-200; */
   /* duration-[400ms,700ms]  } */

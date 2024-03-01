@@ -4,7 +4,7 @@ export function EmailInput() {
       <input
         type="email"
         placeholder="J’ai un projet et j’ai besoin d’aide.."
-        className="w-full h-10 lg:h-14 bg-transparent text-f-secondary placeholder-white/35 outline-0 focus:border-0"
+        className="w-full h-10 lg:h-14 bg-transparent text-f-secondary placeholder-white/35 outline-none focus:border-0"
       />
       <button
         type="submit"

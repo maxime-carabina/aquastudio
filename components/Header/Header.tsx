@@ -16,7 +16,7 @@ export function Header(props: HeaderProps) {
 
   return (
     <header
-      className={`pb-6 flex justify-between items-end lg:items-center border-b ${borderColor}`}
+      className={`pb-6 flex justify-between items-end border-b ${borderColor}`}
     >
       <Link href="/">
         <Image src={Logo} alt="Aqua Studio Logo" width={86.7} height={86.7} />

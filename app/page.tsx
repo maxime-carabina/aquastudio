@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {
   Button,
@@ -143,7 +144,7 @@ export default function Home() {
 
   return (
     <main className="w-full">
-      <div className="px-[22px] md:px-16 lg:px-28 pt-5 min-h-screen bg-primary">
+      <div className="px-[22px] md:px-16 lg:px-28 pt-5 min-h-screen h-fit bg-primary">
         <Header color="secondary" />
         <div className="mt-12 mb-36 lg:mt-28 lg:mb-44 text-f-secondary">
           <h1 className="mb-1.5 lg:mb-0.5 aqua-big-banner text-[42.5px] leading-[50px] lg:text-[120px] lg:leading-[135px] uppercase max-w-5xl">
@@ -169,9 +170,11 @@ export default function Home() {
           <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             Ce que je fais..
           </h1>
-          <Button variant="secondary" customClass="w-fit">
-            Voir tous les projets
-          </Button>
+          <Link href="/projects">
+            <Button variant="secondary" customClass="w-fit">
+              Voir tous les projets
+            </Button>
+          </Link>
         </div>
         <Tabs
           customClass="px-[22px] lg:px-20"
@@ -238,7 +241,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="pt-6 pb-7 lg:pt-3.5 lg:pb-20 border-t">
+        <div className="pt-6 pb-10 lg:pt-3.5 lg:pb-20 border-t">
           <h1 className="mb-2.5 lg:mb-10 font-Gotham text-[14px] lg:text-[40px]">
             UXUI Design
           </h1>
