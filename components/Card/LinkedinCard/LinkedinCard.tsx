@@ -5,7 +5,7 @@ import LkdIcon from '@/src/assets/camille-bregeaut.jpeg';
 export function LinkedinCard() {
   // max-w-[925px]
   return (
-    <div className="px-3 py-3.5 max-w-[985px] bg-white rounded-[20px] flex gap-1.5 lg:gap-7 drop-shadow-md">
+    <div className="px-2.5 lg:px-[25px] pt-4 pb-[19px] lg:pb-9 max-w-[985px] bg-white rounded-[20px] flex gap-[7px] lg:gap-7 drop-shadow-md">
       <div className="rounded-full">
         <Image
           src={LkdIcon}
@@ -20,13 +20,13 @@ export function LinkedinCard() {
         <p className="font-semibold text-[11px] lg:text-[22px]">
           Camille Brégeaut
         </p>
-        <p className="text-[9px] lg:text-[20px]">
+        <p className="text-[8px] lg:text-[20px]">
           🌿 Co-Fondatrice Le Petits Prödiges 🧼 40 femmes Forbes 2023
         </p>
-        <p className="mb-6 text-[8px] lg:text-[20px] opacity-50">
+        <p className="mb-[17px] lg:mb-[25px] text-[8px] lg:text-[20px] opacity-50">
           Le 13 avril 2022, Camille était le/la manager direct(e) de Marine
         </p>
-        <p className="text-[10px] lg:text-[20px] max-w-[803px]">
+        <p className="text-[10px] lg:text-[20px] lg:leading-6 max-w-[790px]">
           Marine est la première créa que nous avons accueilli en interne, cela
           nous a conforté dans l’idée que c’est un post très utile.
           <br />
