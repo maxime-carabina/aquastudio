@@ -12,6 +12,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  SkillsList,
+  SkillType,
 } from '@/components';
 import Logo from '@/src/assets/test.png';
 
@@ -61,6 +63,47 @@ const PROJECTS = [
       objectPosition: 'object-[center_85%]',
     },
     contentButton: 'Beauté ✨',
+  },
+];
+
+const SKILLS_DA: SkillType[] = [
+  {
+    name: 'Identité visuelle',
+    list: [
+      'Direction artistique générale',
+      'Logo',
+      'Couleurs',
+      'Typographies',
+      'Iconographies',
+      'Déclinaisons',
+    ],
+  },
+  {
+    name: 'Print et Packagings',
+    list: ['Design des packs', 'Fichiers d’impressions', 'PLV'],
+  },
+  {
+    name: 'Social média',
+    list: ['Concept et stratégie', 'Feed instagram', 'Stories'],
+  },
+  {
+    name: 'Stratégie de com',
+    list: ['Valeurs', 'Tone of voice'],
+  },
+];
+
+const SKILLS_UXUI: SkillType[] = [
+  {
+    name: 'Recherche utilisateur',
+    list: ['Cible', 'Tendances'],
+  },
+  {
+    name: 'CRO',
+    list: ['Audit de l’existant', 'Création de valeur'],
+  },
+  {
+    name: 'Maquette',
+    list: ['Choix graphiques', 'Iconographies'],
   },
 ];
 
@@ -205,40 +248,7 @@ export default function Home() {
               Vous aider à avoir une identité visuelle impactante à la hauteur
               de votre offre !
             </p>
-            <ul className="list-none ml-auto flex flex-col gap-6 w-fit">
-              <li className="flex items-center gap-6 lg:gap-12">
-                <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
-                  01.
-                </div>
-                <div className="aqua-big-caption text-[12px] lg:text-[25px]">
-                  Identité visuelle
-                </div>
-              </li>
-              <li className="flex items-center gap-6 lg:gap-12">
-                <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
-                  02.
-                </div>
-                <div className="aqua-big-caption text-[12px] lg:text-[25px]">
-                  Print et Packagings
-                </div>
-              </li>
-              <li className="flex items-center gap-6 lg:gap-12">
-                <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
-                  03.
-                </div>
-                <div className="aqua-big-caption text-[12px] lg:text-[25px]">
-                  Social média
-                </div>
-              </li>
-              <li className="flex items-center gap-6 lg:gap-12">
-                <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
-                  04.
-                </div>
-                <div className="aqua-big-caption text-[12px] lg:text-[25px]">
-                  Stratégie de com
-                </div>
-              </li>
-            </ul>
+            <SkillsList skills={SKILLS_DA} />
           </div>
         </div>
         <div className="pt-6 pb-10 lg:pt-3.5 lg:pb-20 border-t">
@@ -250,32 +260,7 @@ export default function Home() {
               Vous aider à avoir une identité visuelle impactante à la hauteur
               de votre offre !
             </p>
-            <ul className="list-none ml-auto flex flex-col gap-6 w-fit">
-              <li className="flex items-center gap-6 lg:gap-12">
-                <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
-                  01.
-                </div>
-                <div className="aqua-big-caption text-[12px] lg:text-[25px]">
-                  Recherche utilisateur
-                </div>
-              </li>
-              <li className="flex items-center gap-6 lg:gap-12">
-                <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
-                  02.
-                </div>
-                <div className="aqua-big-caption text-[12px] lg:text-[25px]">
-                  CRO
-                </div>
-              </li>
-              <li className="flex items-center gap-6 lg:gap-12">
-                <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
-                  03.
-                </div>
-                <div className="aqua-big-caption text-[12px] lg:text-[25px]">
-                  Maquette UXUI
-                </div>
-              </li>
-            </ul>
+            <SkillsList skills={SKILLS_UXUI} />
           </div>
         </div>
       </div>
