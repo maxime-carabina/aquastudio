@@ -59,14 +59,14 @@ export function Footer() {
           <a
             target="_blank"
             href="https://www.instagram.com/aqua_stud_/"
-            className="relative aqua-caption text-[10px] lg:text-[20px] leading-[30px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
+            className="relative aqua-caption text-[10px] lg:text-[20px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
           >
             Instagram
           </a>
           <a
             target="_blank"
             href="https://www.linkedin.com/in/marine-perraud-b05a25199/"
-            className="relative aqua-caption text-[10px] lg:text-[20px] leading-[30px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
+            className="relative aqua-caption text-[10px] lg:text-[20px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
           >
             Linkedin
           </a>
