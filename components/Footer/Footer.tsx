@@ -26,8 +26,8 @@ export function Footer() {
           <br />
           studio
         </p>
-        <ul className="list-none aqua-caption lg:flex flex-col lg:gap-10">
-          <li className="">
+        <ul className="hidden list-none aqua-caption lg:flex flex-col lg:gap-10">
+          <li>
             <a
               target="_blank"
               href="https://www.instagram.com/aqua_stud_/"
@@ -36,7 +36,7 @@ export function Footer() {
               Instagram
             </a>
           </li>
-          <li className="">
+          <li>
             <a
               target="_blank"
               href="https://www.linkedin.com/in/marine-perraud-b05a25199/"
@@ -52,8 +52,24 @@ export function Footer() {
           <p>C’est l’heure de tenter l’expérience !</p>
           <Time time={time} />
         </div>
-        <div className="">
+        <div className="mb-14 lg:mb-0">
           <EmailInput />
+        </div>
+        <div className="lg:hidden flex items-center justify-end gap-14 lg:gap-24">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/aqua_stud_/"
+            className="relative aqua-caption text-[10px] lg:text-[20px] leading-[30px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
+          >
+            Instagram
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/marine-perraud-b05a25199/"
+            className="relative aqua-caption text-[10px] lg:text-[20px] leading-[30px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
+          >
+            Linkedin
+          </a>
         </div>
       </div>
     </footer>
