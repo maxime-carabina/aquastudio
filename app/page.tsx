@@ -264,7 +264,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pt-11 lg:pt-14 lg:pb-6 text-f-primary">
+      <div className="pt-11 lg:pt-14 lg:pb-[70px] text-f-primary">
         <div className="px-[22px] md:px-16 lg:px-20 lg:mb-11">
           <h1 className="mb-6 lg:mb-[22px] aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase">
             ILS ONT AIMÉS !
