@@ -47,7 +47,7 @@ export default function ProjectsPage() {
       </div>
       <div className="px-[22px] md:px-16 lg:px-28 pt-5">
         <div className="mb-6 lg:pt-[51px] lg:pb-12 flex justify-center gap-[50px] border-b border-t border-primary">
-          <div className="w-[466px] h-full sticky top-[51px]">
+          <div className="w-[466px] max-h-screen sticky top-[51px]">
             <div className="h-[449px] relative mb-10">
               <Image
                 src="/images/lpp-baumes.jpg"
@@ -57,7 +57,10 @@ export default function ProjectsPage() {
                 className="rounded-[20px]"
               />
             </div>
-            <div className="bg-primary rounded-[20px] py-3 px-[19px] h-full">
+            <div
+              className="bg-primary rounded-[20px] py-3 px-[19px]"
+              style={{ height: 'calc(100vh - 590px)' }}
+            >
               <p className=" aqua-caption text-f-secondary text-justify lg:text-[16px] lg:leading-[22px] mb-28">
                 <span className="underline decoration-1 underline-offset-4">
                   Ce que j’ai fait :
