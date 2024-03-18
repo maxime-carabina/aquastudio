@@ -257,8 +257,8 @@ export default function Home() {
           </h1>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-[402px]">
             <p className="aqua-big-caption text-[12px] max-w-60 lg:text-[25px] lg:max-w-[490px]">
-              Vous aider à avoir une identité visuelle impactante à la hauteur
-              de votre offre !
+              Vous accompagner sur la conception d’un site e-commerce sexy et
+              attractif.
             </p>
             <SkillsList skills={SKILLS_UXUI} />
           </div>
