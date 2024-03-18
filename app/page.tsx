@@ -213,7 +213,7 @@ export default function Home() {
           <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             Ce que je fais..
           </h1>
-          <Link href="/projects">
+          <Link href="/projets">
             <Button variant="secondary" customClass="w-fit">
               Voir tous les projets
             </Button>
