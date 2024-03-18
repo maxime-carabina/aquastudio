@@ -100,18 +100,24 @@
   font-family: 'Gotham';
   src: url('../public/fonts/Gotham-Font/Gotham-Black.otf');
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url('../public/fonts/Gotham-Font/Gotham-Bold.otf');
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url('../public/fonts/Gotham-Font/Gotham-Book.ttf');
   font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -119,4 +125,34 @@
   src: url('../public/fonts/Gotham-Font/Gotham-Light.otf');
   font-weight: 500;
   /* font-style: normal; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Avenir Next */
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('../public/fonts/Avenir-Next/AvenirNextCyr-Regular.ttf');
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('../public/fonts/Avenir-Next/AvenirNextCyr-MediumItalic.ttf');
+  font-weight: medium;
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Degular Variable */
+@font-face {
+  font-family: 'DegularVariable';
+  src: url('../public/fonts/Degular-Variable/DegularVariable.ttf');
+  font-weight: bold;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
