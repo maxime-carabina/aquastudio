@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from '@/components';
 
-const TAGS = ['DA', 'Personnal Branding '];
+const TAGS = ['DA', 'Personnal Branding'];
 
 const PROJECTS = [
   {

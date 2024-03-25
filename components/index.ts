@@ -8,3 +8,4 @@ export * from './Footer';
 export * from './EmailInput';
 export * from './SmoothScroller';
 export * from './SkillsList';
+export * from './Accordion';

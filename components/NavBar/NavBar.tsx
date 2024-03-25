@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 // import { gsap } from 'gsap';
 // import { Flip } from 'gsap/Flip';
@@ -23,7 +24,7 @@ const LINKS = [
     label: 'Quoi ?',
   },
   {
-    href: '',
+    href: '/a-propos',
     label: 'Qui ?',
   },
   {
@@ -40,7 +41,17 @@ type LinksHovered = {
 export function NavBar(props: NavBarProps) {
   const { defaultIndex = 0 } = props;
 
-  const [selectedIndex, setSelectedIndex] = useState<number>(defaultIndex);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setSelectedIndex(
+      LINKS.findIndex((link) => link.href === pathname) || defaultIndex,
+    );
+  }, [pathname]);
+
+  const [selectedIndex, setSelectedIndex] = useState<number>(
+    LINKS.findIndex((link) => link.href === pathname),
+  );
   const [linksHovered, setLinksHovered] = useState<LinksHovered[]>([
     { id: 0, isHovered: false },
     { id: 1, isHovered: false },
