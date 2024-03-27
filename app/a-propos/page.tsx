@@ -16,6 +16,7 @@ import {
   ProjectCard,
   LinkedinCard,
 } from '@/components';
+import Logo from '@/src/assets/test.png';
 
 const TAGS = ['Photoshop', 'Illustrator', 'Figma', 'After Effect'];
 
@@ -146,10 +147,10 @@ export default function AboutPage() {
 
   return (
     <main className="w-full">
-      <div className="px-[22px] md:px-16 lg:px-28 pt-5 pb-[53px] bg-primary">
+      <div className="px-[22px] md:px-16 lg:px-28 pt-5 pb-[35px] lg:pb-[53px] bg-primary">
         <Header color="secondary" />
-        <div className="lg:mt-[62px] text-f-secondary flex gap-[46px]">
-          <div className="w-[546px] h-[633px] relative">
+        <div className="mt-[38px] lg:mt-[62px] text-f-secondary flex flex-wrap md:flex-nowrap gap-5 md:gap-[46px]">
+          <div className="w-[346px] h-[312px] md:w-[546px] md:h-[633px] relative">
             <Image
               src="/images/projects/MAX/image3D.jpg"
               alt="About me"
@@ -160,20 +161,20 @@ export default function AboutPage() {
             />
           </div>
           <div className="grow">
-            <h2 className="font-GothamLight leading-[19.12px] lg:text-[18px] antialiased mb-2">
+            <h2 className="font-GothamLight text-[10px] lg:leading-[19.12px] lg:text-[18px] antialiased mb-2">
               Directrice artistique - UXUI designer
             </h2>
-            <h1 className="uppercase aqua-banner lg:text-[50px] lg:leading-none antialiased mb-12">
+            <h1 className="uppercase aqua-banner text-[20px] lg:text-[50px] leading-none antialiased mb-5 lg:mb-12">
               Marine Perraud
             </h1>
-            <div className="mb-12 flex flex-wrap gap-3 lg:max-w-none lg:gap-5">
+            <div className="mb-[31px] md:mb-12 flex flex-wrap gap-3 lg:max-w-none lg:gap-5">
               {TAGS.map((tag, index) => (
                 <Button key={index} customClass="w-fit">
                   {tag}
                 </Button>
               ))}
             </div>
-            <p className="mb-[30px] aqua-caption lg:text-[16px] lg-leading-[22px] max-w-[640px] antialiased">
+            <p className="mb-[30px] aqua-caption text-[10px] lg:text-[16px] lg-leading-[22px] max-w-[640px] antialiased">
               La création a toujours été une composante essentielle de mon
               existence.
               <br />
@@ -184,8 +185,11 @@ export default function AboutPage() {
               Ce métier représente l'harmonie idéale entre les aspects
               commerciaux et créatifs indispensables à mon épanouissement.
             </p>
-            <div className="lg:mb-[60px]">
-              <Button variant="tertiary" customClass="rounded-[20px] h-[71px]">
+            <div className="mb-[30px] lg:mb-[60px]">
+              <Button
+                variant="tertiary"
+                customClass="rounded-[5px] lg:rounded-[20px] h-7 lg:h-[71px]"
+              >
                 Je veux te contacter ! ✨
               </Button>
             </div>
@@ -193,32 +197,32 @@ export default function AboutPage() {
               title="Où j’ai travaillé ?"
               content={
                 <ul className="list-disc pl-4">
-                  <li className="mb-11">
-                    <span className="antialiased font-GothamBook lg:text-[20px]">
+                  <li className="mb-[37px] lg:mb-11">
+                    <span className="antialiased font-GothamBook text-[12px] lg:text-[20px]">
                       TAMARA AGENCY - Experts Shopify
                     </span>
-                    <div className="mt-[23px] relative antialiased before:content-[''] before:h-[93px] before:w-[1px] before:bg-secondary before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2">
-                      <div className="mb-[11px] font-GothamBook leading-[17px] lg:text-[16px] pl-3">
+                    <div className="mt-2 lg:mt-[23px] relative antialiased before:content-[''] before:h-[83px] before:md:h-[93px] before:w-[1px] before:bg-secondary before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2">
+                      <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px] pl-3">
                         Alternance et freelance/2023
                       </div>
-                      <div className="mb-12 font-GothamLight leading-[17px] lg:text-[16px] pl-3">
+                      <div className="mb-8 lg:mb-12 font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px] pl-3">
                         Refonte DA de l’agence - identité visuelle des clients -
                         social média
                       </div>
-                      <div className="font-GothamLight leading-[17px] lg:text-[16px] pl-3">
+                      <div className="font-GothamLight text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px] pl-3">
                         Stage/2021
                       </div>
                     </div>
                   </li>
                   <li>
-                    <span className="antialiased font-GothamBook lg:text-[20px]">
+                    <span className="antialiased font-GothamBook text-[12px] lg:text-[20px]">
                       LES PETITS PRÖDIGES
                     </span>
-                    <div className="pt-[23px] pb-10 antialiased">
-                      <div className="mb-[11px] font-GothamBook leading-[17px] lg:text-[16px]">
+                    <div className="pt-2 lg:pt-[23px] pb-10 antialiased">
+                      <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
                         Stage 6 mois/2022
                       </div>
-                      <div className="font-GothamLight leading-[17px] lg:text-[16px]">
+                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px]">
                         Création de packagings - vitrines (Monop’ beauty) -
                         illustrations - PLV - assistance aux shootings - social
                         média
@@ -232,15 +236,15 @@ export default function AboutPage() {
               title="Où j’ai appris ? "
               content={
                 <ul className="list-disc pl-4">
-                  <li className="mb-11">
-                    <span className="antialiased font-GothamBook lg:text-[20px]">
+                  <li className="mb-[37px] lg:mb-11">
+                    <span className="antialiased font-GothamBook text-[12px] lg:text-[20px]">
                       ISCOM PARIS - Master manager de la marque
                     </span>
-                    <div className="pt-[23px] antialiased">
-                      <div className="mb-[11px] font-GothamBook leading-[17px] lg:text-[16px]">
+                    <div className="pt-2 lg:pt-[23px] antialiased">
+                      <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
                         Spécialité CREA360/2020-2023
                       </div>
-                      <div className="font-GothamLight leading-[17px] lg:text-[16px max-w-[620px]">
+                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px max-w-[620px]">
                         Print/édition/packagings - Direction artistique -
                         Stratégie de marque Conception rédaction - Cultural
                         studies - Motion design - Activation digitale.
@@ -248,14 +252,14 @@ export default function AboutPage() {
                     </div>
                   </li>
                   <li>
-                    <span className="antialiased font-GothamBook lg:text-[20px]">
+                    <span className="antialiased font-GothamBook text-[12px] lg:text-[20px]">
                       BTS MUC - Notre Dame Les Oiseaux
                     </span>
-                    <div className="pt-[23px] pb-10 antialiased">
-                      <div className="mb-[11px] font-GothamBook leading-[17px] lg:text-[16px]">
+                    <div className="pt-2 lg:pt-[23px] lg:pb-10 antialiased">
+                      <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
                         2 ans/2018-2020
                       </div>
-                      <div className="font-GothamLight leading-[17px] lg:text-[16px max-w-[620px]">
+                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px max-w-[620px]">
                         Marketing général - Management - Merchandising - Droit -
                         Économie - Gestion.
                       </div>
@@ -284,11 +288,11 @@ export default function AboutPage() {
           tabsConfig={tabsConfig}
         />
       </div>
-      <div className="px-[22px] md:px-16 lg:px-20 py-20 bg-primary text-f-secondary">
+      <div className="px-[22px] py-11 md:px-16 lg:px-20 lg:py-20 bg-primary text-f-secondary">
         <h1 className="mb-6 lg:mb-14 aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase">
           Pourquoi moi ?
         </h1>
-        <div className="flex items-center justify-between">
+        <div className="hidden lg:flex items-center justify-between">
           <div className="text-center">
             <div className="lg:text-[60px] mb-7">👀</div>
             <div className="uppercase antialiased font-GothamBook text-[20px]">
@@ -314,6 +318,46 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+        <div className="flex w-full justify-center p-10 items-center">
+          <Carousel className="lg:hidden w-full max-w-xs">
+            <CarouselContent className="w-full">
+              <CarouselItem className="pl-5 basis-full h-full">
+                <div className="text-center h-full flex flex-col items-center justify-center">
+                  <div className="text-[60px] mb-5 lg:mb-7">👀</div>
+                  <div className="uppercase antialiased font-GothamBook text-[20px]">
+                    Curieuse
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem className="basis-full">
+                <div className="text-center h-full flex flex-col items-center justify-center">
+                  <div className="text-[60px] mb-5 lg:mb-7">✨</div>
+                  <div className="uppercase antialiased font-GothamBook text-[20px]">
+                    Rigoureuse
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem className="basis-full">
+                <div className="text-center h-full flex flex-col items-center justify-center">
+                  <div className="text-[60px] mb-5 lg:mb-7">🤜</div>
+                  <div className="uppercase antialiased font-GothamBook text-[20px]">
+                    Entreprenante
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem className="basis-full">
+                <div className="text-center h-full flex flex-col items-center justify-center">
+                  <div className="text-[60px] mb-5 lg:mb-7">🎧</div>
+                  <div className="uppercase antialiased font-GothamBook text-[20px]">
+                    À l'écoute
+                  </div>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious customClass="bg-secondary text-f-primary w-10 h-10" />
+            <CarouselNext customClass="bg-secondary text-f-primary w-10 h-10" />
+          </Carousel>
+        </div>
       </div>
       <div className="pt-11 lg:pt-14 lg:pb-[70px] text-f-primary">
         <div className="px-[22px] md:px-16 lg:px-20 lg:mb-11">
@@ -325,6 +369,58 @@ export default function AboutPage() {
               “Elle a su s’adapter et être autonome”
             </p>
             <LinkedinCard />
+          </div>
+        </div>
+        <div className="block overflow-hidden uppercase">
+          <div className="block whitespace-nowrap">
+            <span className="inline-block text-center whitespace-nowrap animate-infinite-loop">
+              <div className="flex items-center">
+                <Image
+                  src={Logo}
+                  alt="Aqua Studio Logo"
+                  className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                />
+                <p className="aqua-banner text-[30px] md:text-[70px]">
+                  CONTACTEZ-MOI
+                </p>
+              </div>
+            </span>
+            <span className="inline-block text-center whitespace-nowrap animate-infinite-loop">
+              <div className="flex items-center">
+                <Image
+                  src={Logo}
+                  alt="Aqua Studio Logo"
+                  className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                />
+                <p className="aqua-banner text-[30px] md:text-[70px]">
+                  CONTACTEZ-MOI
+                </p>
+              </div>
+            </span>
+            <span className="inline-block text-center whitespace-nowrap animate-infinite-loop">
+              <div className="flex items-center">
+                <Image
+                  src={Logo}
+                  alt="Aqua Studio Logo"
+                  className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                />
+                <p className="aqua-banner text-[30px] md:text-[70px]">
+                  CONTACTEZ-MOI
+                </p>
+              </div>
+            </span>
+            <span className="inline-block text-center whitespace-nowrap animate-infinite-loop">
+              <div className="flex items-center">
+                <Image
+                  src={Logo}
+                  alt="Aqua Studio Logo"
+                  className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                />
+                <p className="aqua-banner text-[30px] md:text-[70px]">
+                  CONTACTEZ-MOI
+                </p>
+              </div>
+            </span>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@
 
 @layer aqua-custom-styles {
   .default-button {
-    @apply aqua-buttons min-w-fit w-full h-fit text-f-primary border-[.5px] rounded-[5px];
+    @apply aqua-buttons leading-[10px] lg:leading-[21.24px] min-w-fit w-full h-fit text-f-primary border-[.5px] rounded-[5px];
   }
 
   .default-primary {
