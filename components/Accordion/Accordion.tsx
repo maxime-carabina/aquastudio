@@ -18,7 +18,7 @@ export function Accordion(props: AccordionProps) {
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="flex justify-between items-center w-full"
       >
-        <span className="font-Gotham font-normal lg:text-[20px] antialiased">
+        <span className="font-Gotham font-normal text-[12px] lg:text-[20px] antialiased">
           {title}
         </span>
         <svg
