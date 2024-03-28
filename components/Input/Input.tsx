@@ -93,7 +93,7 @@ export function RawInput(props: InputProps) {
         <div className="inline h-12">
           <input
             data-testid="input-field"
-            className={`w-full default-input h-[71px] pl-[23px] py-5 pr-10 mb-1 ${messageClass} ${customClass}`}
+            className={`w-full default-input h-[51px] lg:h-[71px] lg:pl-[23px] pl-3 py-1 lg:py-5 pr-10 mb-1 ${messageClass} ${customClass}`}
             type="text"
             disabled={disable}
             {...rest}

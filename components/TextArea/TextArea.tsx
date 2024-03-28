@@ -23,8 +23,8 @@ export function TextArea(props: TextAreaProps) {
         data-testid="text-area"
         data-type="text-area"
         rows={4}
-        className={`w-full h-auto default-input font-GothamLight text-[22px] resize-none
-          py-[25px] px-[26px] placeholder-white/35 ${messageClass} ${customClass}`}
+        className={`w-full h-auto default-input font-GothamLight lg:text-[22px] resize-none
+          px-3 py-2 lg:py-[25px] lg:px-[26px] placeholder-white/35 ${messageClass} ${customClass}`}
         {...rest}
       />
       <TextAreaMessage error={error} warning={warning} success={success} />
