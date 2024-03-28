@@ -9,3 +9,5 @@ export * from './EmailInput';
 export * from './SmoothScroller';
 export * from './SkillsList';
 export * from './Accordion';
+export * from './TextArea';
+export * from './Input';

@@ -28,7 +28,7 @@ const LINKS = [
     label: 'Qui ?',
   },
   {
-    href: '',
+    href: '/contact',
     label: 'Où et Quand ?',
   },
 ];
