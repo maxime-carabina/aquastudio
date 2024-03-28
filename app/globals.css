@@ -41,7 +41,7 @@
           focus:border-secondary focus:text-secondary
           bg-primary
           placeholder-white/35 text-secondary
-          rounded-[20px];
+          rounded-[15px] lg:rounded-[20px];
   }
 
   /* We rely on placeholder to change the border */
