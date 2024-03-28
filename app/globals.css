@@ -31,6 +31,22 @@
 }
 
 @layer aqua-custom-styles {
+  .default-input {
+    @apply border-secondary border border-solid outline-0
+          hover:border-tertiary
+          focus:border-secondary focus:text-secondary
+          bg-primary
+          placeholder-white/35 text-secondary
+          rounded-[20px];
+  }
+
+  /* We rely on placeholder to change the border */
+  /* once uncontrolled components not necessary have value property */
+  .default-input:not(:placeholder-shown),
+  .default-input:not([value='']):not([data-type='text-area']) {
+    @apply border-secondary text-secondary;
+  }
+
   .default-button {
     @apply aqua-buttons leading-[10px] lg:leading-[21.24px] min-w-fit w-full h-fit text-f-primary border-[.5px] rounded-[5px];
   }
