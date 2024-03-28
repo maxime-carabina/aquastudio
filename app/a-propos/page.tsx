@@ -194,12 +194,12 @@ export default function AboutPage() {
             <Accordion
               title="Où j’ai travaillé ?"
               content={
-                <ul className="list-disc pl-4">
+                <ul className="list-disc pl-5 lg:pl-4">
                   <li className="mb-[37px] lg:mb-11">
                     <span className="antialiased font-GothamBook text-[12px] lg:text-[20px]">
                       TAMARA AGENCY - Experts Shopify
                     </span>
-                    <div className="mt-2 lg:mt-[23px] relative antialiased before:content-[''] before:h-[83px] before:md:h-[93px] before:w-[1px] before:bg-secondary before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2">
+                    <div className="mt-2 lg:mt-[23px] relative antialiased before:content-[''] before:h-[63px] before:md:h-[93px] before:w-[1px] before:bg-secondary before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2">
                       <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px] pl-3">
                         Alternance et freelance/2023
                       </div>
