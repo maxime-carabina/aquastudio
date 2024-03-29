@@ -242,7 +242,7 @@ export default function AboutPage() {
                       <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
                         Spécialité CREA360/2020-2023
                       </div>
-                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px max-w-[620px]">
+                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px] lg:max-w-[620px]">
                         Print/édition/packagings - Direction artistique -
                         Stratégie de marque Conception rédaction - Cultural
                         studies - Motion design - Activation digitale.
@@ -257,7 +257,7 @@ export default function AboutPage() {
                       <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
                         2 ans/2018-2020
                       </div>
-                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px max-w-[620px]">
+                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px] lg:max-w-[620px]">
                         Marketing général - Management - Merchandising - Droit -
                         Économie - Gestion.
                       </div>
@@ -271,7 +271,7 @@ export default function AboutPage() {
       </div>
       <div className="pt-11 pb-[26px] lg:pt-12 lg:pb-36 text-f-primary">
         <div className="mb-5 md:mb-0 px-[22px] md:px-16 lg:px-20 flex justify-between items-center">
-          <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
+          <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase antialiased">
             Ce que je fais..
           </h1>
           <Link href="/projets">
@@ -287,31 +287,31 @@ export default function AboutPage() {
         />
       </div>
       <div className="px-[22px] py-11 md:px-16 lg:px-20 lg:py-20 bg-primary text-f-secondary">
-        <h1 className="mb-6 lg:mb-14 aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase">
+        <h1 className="mb-6 lg:mb-14 aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase antialiased">
           Pourquoi moi ?
         </h1>
         <div className="hidden lg:flex items-center justify-between">
           <div className="text-center">
             <div className="lg:text-[60px] mb-7">👀</div>
-            <div className="uppercase antialiased font-GothamBook text-[20px]">
+            <div className="uppercase antialiased font-GothamBook font-medium text-[20px]">
               Curieuse
             </div>
           </div>
           <div className="text-center">
             <div className="lg:text-[60px] mb-7">✨</div>
-            <div className="uppercase antialiased font-GothamBook text-[20px]">
+            <div className="uppercase antialiased font-GothamBook font-medium text-[20px]">
               Rigoureuse
             </div>
           </div>
           <div className="text-center">
             <div className="lg:text-[60px] mb-7">🤜</div>
-            <div className="uppercase antialiased font-GothamBook text-[20px]">
+            <div className="uppercase antialiased font-GothamBook font-medium text-[20px]">
               Entreprenante
             </div>
           </div>
           <div className="text-center">
             <div className="lg:text-[60px] mb-7">🎧</div>
-            <div className="uppercase antialiased font-GothamBook text-[20px]">
+            <div className="uppercase antialiased font-GothamBook font-medium text-[20px]">
               À l'écoute
             </div>
           </div>
@@ -359,11 +359,11 @@ export default function AboutPage() {
       </div>
       <div className="pt-11 lg:pt-14 lg:pb-[70px] text-f-primary">
         <div className="px-[22px] md:px-16 lg:px-20 lg:mb-11">
-          <h1 className="mb-6 lg:mb-[22px] aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase">
+          <h1 className="mb-6 lg:mb-[22px] aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase antialiased">
             ILS ONT AIMÉS !
           </h1>
           <div>
-            <p className="mb-3 lg:mb-12 font-GothamBook font-normal text-[12px] lg:text-[25px] lg:leading-[30px]">
+            <p className="mb-3 lg:mb-12 font-GothamBook font-normal text-[12px] lg:text-[25px] lg:leading-[30px] antialiased">
               “Elle a su s’adapter et être autonome”
             </p>
             <LinkedinCard />

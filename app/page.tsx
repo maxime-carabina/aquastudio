@@ -266,11 +266,11 @@ export default function Home() {
       </div>
       <div className="pt-11 lg:pt-14 lg:pb-[70px] text-f-primary">
         <div className="px-[22px] md:px-16 lg:px-20 lg:mb-11">
-          <h1 className="mb-6 lg:mb-[22px] aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase">
+          <h1 className="mb-6 lg:mb-[22px] aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase antialiased">
             ILS ONT AIMÉS !
           </h1>
           <div className="lg:mb-20">
-            <p className="mb-3 lg:mb-12 font-GothamBook font-normal text-[12px] lg:text-[25px] lg:leading-[30px]">
+            <p className="mb-3 lg:mb-12 font-GothamBook font-normal text-[12px] lg:text-[25px] lg:leading-[30px] antialiased">
               “Elle a su s’adapter et être autonome”
             </p>
             <LinkedinCard />
