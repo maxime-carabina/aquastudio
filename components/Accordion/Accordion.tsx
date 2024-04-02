@@ -66,14 +66,14 @@ function LargeAccordion(props: AccordionProps) {
         }}
         className={`flex justify-between items-center w-full ${allowClose ? '' : 'cursor-default'}`}
       >
-        <span className="font-Gotham font-normal text-[12px] lg:text-[40px] antialiased">
+        <span className="font-Gotham font-normal text-[14px] lg:text-[40px] antialiased">
           {title}
         </span>
       </button>
       <div
         className={`grid overflow-hidden transition-all duration-300 ease-in-out text-f-secondary ${
           accordionOpen
-            ? 'grid-rows-[1fr] opacity-100 mt-6'
+            ? 'grid-rows-[1fr] opacity-100 mt-2.5 lg:mt-6'
             : 'grid-rows-[0fr] opacity-0'
         }`}
       >
