@@ -12,8 +12,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  SkillsList,
   SkillType,
+  Accordion,
 } from '@/components';
 import Logo from '@/src/assets/test.png';
 
@@ -225,7 +225,7 @@ export default function Home() {
           tabsConfig={tabsConfig}
         />
       </div>
-      <div className="px-[22px] pt-11 md:px-16 lg:px-20 lg:pt-12 bg-primary text-f-secondary">
+      <div className="px-[22px] pt-11 md:px-16 lg:px-20 lg:pt-12 bg-primary text-f-secondary h-fit">
         <div className="mb-5 lg:mb-12 flex justify-between items-center">
           <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             CE QUE JE PROPOSE..
@@ -239,30 +239,93 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="pt-6 pb-7 lg:pt-3.5 lg:pb-20 border-t">
-          <h1 className="mb-2.5 lg:mb-10 font-Gotham text-[14px] lg:text-[40px]">
-            Direction artistique
-          </h1>
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[402px]">
-            <p className="aqua-big-caption text-[12px] max-w-60 lg:text-[25px] lg:max-w-[490px]">
-              Vous aider à avoir une identité visuelle impactante à la hauteur
-              de votre offre !
-            </p>
-            <SkillsList skills={SKILLS_DA} />
-          </div>
-        </div>
-        <div className="pt-6 pb-10 lg:pt-3.5 lg:pb-20 border-t">
-          <h1 className="mb-2.5 lg:mb-10 font-Gotham text-[14px] lg:text-[40px]">
-            UXUI Design
-          </h1>
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[402px]">
-            <p className="aqua-big-caption text-[12px] max-w-60 lg:text-[25px] lg:max-w-[490px]">
-              Vous accompagner sur la conception d’un site e-commerce sexy et
-              attractif.
-            </p>
-            <SkillsList skills={SKILLS_UXUI} />
-          </div>
-        </div>
+        <Accordion
+          title="Direction artistique"
+          content={
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-[402px]">
+              <p className="aqua-big-caption text-[12px] max-w-60 lg:text-[25px] lg:max-w-[490px] antialiased">
+                Vous aider à avoir une identité visuelle impactante à la hauteur
+                de votre offre !
+              </p>
+              <div className="ml-auto flex flex-col gap-3 lg:gap-6 w-full max-w-48 lg:max-w-96">
+                {SKILLS_DA.map((skill, index) => (
+                  <Accordion
+                    key={index}
+                    variant="list"
+                    isOpen={index === 0}
+                    title={
+                      <>
+                        <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
+                          {`0${index + 1}.`}
+                        </div>
+                        <div className="aqua-big-caption text-[12px] lg:text-[25px]">
+                          {skill.name}
+                        </div>
+                      </>
+                    }
+                    content={
+                      <ul className="list-disc ml-16 lg:mt-2 lg:ml-24 mb-3">
+                        {skill.list.map((item, itemIdx) => (
+                          <li
+                            key={itemIdx}
+                            className="aqua-caption text-[10px] lg:text-[16px] antialiased"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          }
+          size="large"
+          allowClose={false}
+        />
+        <Accordion
+          title="UXUI Design"
+          content={
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-[402px]">
+              <p className="aqua-big-caption text-[12px] max-w-60 lg:text-[25px] lg:max-w-[490px] antialiased">
+                Vous accompagner sur la conception d’un site e-commerce sexy et
+                attractif.
+              </p>
+              <div className="ml-auto flex flex-col gap-3 lg:gap-6 w-full max-w-48 lg:max-w-96">
+                {SKILLS_UXUI.map((skill, index) => (
+                  <Accordion
+                    key={index}
+                    variant="list"
+                    title={
+                      <>
+                        <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
+                          {`0${index + 1}.`}
+                        </div>
+                        <div className="aqua-big-caption text-[12px] lg:text-[25px]">
+                          {skill.name}
+                        </div>
+                      </>
+                    }
+                    content={
+                      <ul className="list-disc ml-16 lg:mt-2 lg:ml-24 mb-3">
+                        {skill.list.map((item, itemIdx) => (
+                          <li
+                            key={itemIdx}
+                            className="aqua-caption text-[10px] lg:text-[16px] antialiased"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          }
+          size="large"
+          allowClose={false}
+        />
       </div>
       <div className="pt-11 lg:pt-14 lg:pb-[70px] text-f-primary">
         <div className="px-[22px] md:px-16 lg:px-20 lg:mb-11">
