@@ -225,7 +225,7 @@ export default function Home() {
           tabsConfig={tabsConfig}
         />
       </div>
-      <div className="px-[22px] pt-11 md:px-16 lg:px-20 lg:pt-12 bg-primary text-f-secondary h-fit">
+      <div className="px-[22px] pt-11 md:px-16 lg:px-20 lg:pt-12 bg-primary text-f-secondary h-fit relative">
         <div className="mb-5 lg:mb-12 flex justify-between items-center">
           <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             CE QUE JE PROPOSE..

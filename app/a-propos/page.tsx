@@ -150,11 +150,11 @@ export default function AboutPage() {
         <div className="mt-[38px] lg:mt-[62px] text-f-secondary flex flex-wrap md:flex-nowrap gap-5 md:gap-[46px]">
           <div className="w-[346px] h-[312px] md:w-[546px] md:h-[633px] relative">
             <Image
-              src="/images/projects/MAX/image3D.jpg"
-              alt="About me"
+              src="/images/Marine-Perraud.jpg"
+              alt="Marine Perraud"
               quality={100}
               fill
-              className="rounded-[20px] object-cover"
+              className="rounded-[20px] object-cover object-top"
               sizes="(max-width: 546px) 100vw, 546px"
             />
           </div>

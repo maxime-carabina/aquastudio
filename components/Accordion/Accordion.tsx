@@ -2,6 +2,8 @@
 
 import { ReactNode, useState } from 'react';
 
+import { cn } from '@/lib/utils';
+
 type AccordionProps = {
   title: string | ReactNode;
   content: ReactNode;
@@ -9,7 +11,7 @@ type AccordionProps = {
   size?: 'default' | 'large'; // Add a prop to allow the accordion to be 'large
   allowClose?: boolean; // Add a prop to allow the accordion to be closed
   isOpen?: boolean;
-  customClass?: string;
+  className?: string;
 };
 
 export function Accordion(props: AccordionProps) {
@@ -25,12 +27,12 @@ export function Accordion(props: AccordionProps) {
 }
 
 function ListAccordion(props: AccordionProps) {
-  const { title, content, isOpen = false, customClass } = props;
+  const { title, content, isOpen = false, className } = props;
 
   const [accordionOpen, setAccordionOpen] = useState<boolean>(isOpen);
 
   return (
-    <div className={`${customClass}`}>
+    <div className={cn(className)}>
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="flex items-center gap-6 lg:gap-12 hover:text-f-secondary/75 transition-all duration-300 w-full antialiased"
@@ -51,14 +53,19 @@ function ListAccordion(props: AccordionProps) {
 }
 
 function LargeAccordion(props: AccordionProps) {
-  const { title, content, allowClose = true } = props;
+  const { title, content, allowClose = true, className } = props;
 
   const [accordionOpen, setAccordionOpen] = useState<boolean>(
     allowClose ? false : true,
   );
 
   return (
-    <div className="py-6 pb-7 lg:pt-3.5 lg:pb-20 border-t border-secondary">
+    <div
+      className={cn(
+        'py-6 pb-7 lg:pt-3.5 lg:pb-20 border-t border-secondary',
+        className,
+      )}
+    >
       <button
         onClick={() => {
           if (!allowClose) return;
