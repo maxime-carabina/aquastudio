@@ -1,0 +1,367 @@
+[
+  {
+    "id": "max",
+    "content": {
+      "name": "Max",
+      "tags": ["DA", "Personnal Branding"],
+      "description": [
+        "Maxime Carabina, un jeune développeur, a l'intention de débuter une carrière en freelance. Il reconnaît que cultiver son personal branding sera un atout significatif pour se démarquer dans son cheminement professionnel."
+      ],
+      "heroImages": {
+        "height": 491,
+        "left": {
+          "src": "/images/projects/MAX/stickers-mockup-2.png",
+          "alt": "stickers-mockup-2",
+          "width": 691,
+          "objectFit": "object-cover",
+          "objectPosition": "center 65%"
+        },
+        "right": {
+          "src": "/images/projects/MAX/start.jpg",
+          "alt": "start",
+          "objectFit": "object-cover"
+        }
+      },
+      "project": {
+        "left": {
+          "image": {
+            "src": "/images/projects/MAX/carte-de-visite-mockup.png",
+            "alt": "branding",
+            "height": 491
+          },
+          "description": [
+            "Le challenge : Capturer la personnalité distinctive du client tout en renforçant sa crédibilité et son expertise dans son domaine.",
+            "Mots 🔑 : Web3 - Gaming - moderne"
+          ]
+        },
+        "right": [
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/MAX/bannière-linkedin.jpg",
+              "alt": "bannière-linkedin",
+              "height": 172
+            }
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/MAX/image3D.jpg",
+                  "alt": "image3D",
+                  "height": 299,
+                  "width": 212
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/MAX/Logo_max.jpg",
+                  "alt": "Logo_max",
+                  "height": 299
+                }
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "text",
+                "item": {
+                  "colorName": "[Light blue]",
+                  "colorHex": "#C9E6F8",
+                  "fontFamily": "AvenirNext"
+                }
+              },
+              {
+                "type": "text",
+                "item": {
+                  "colorName": "[Mid blue]",
+                  "colorHex": "#60A7D3",
+                  "textColor": "white",
+                  "fontFamily": "AvenirNext"
+                }
+              },
+              {
+                "type": "text",
+                "item": {
+                  "colorName": "[Pure black]",
+                  "colorHex": "#000000",
+                  "height": 213,
+                  "textColor": "white",
+                  "fontFamily": "AvenirNext"
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/MAX/affiche.png",
+                  "alt": "affiche",
+                  "height": 495,
+                  "width": 373
+                }
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/MAX/mockup-2.jpg",
+              "alt": "mockup-2",
+              "height": 539
+            }
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/MAX/max-mockup.png",
+                  "alt": "max-mockup",
+                  "width": 399,
+                  "height": 499
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "font-presentation",
+                "fontPresentation": {
+                  "height": 193,
+                  "letterOverview": {
+                    "text": "Aa",
+                    "fontWeight": 700
+                  },
+                  "fontFamily": "DegularVariable",
+                  "textColor": "white",
+                  "bgColor": "black",
+                  "fonts": [
+                    {
+                      "text": "Degular Variable bold",
+                      "fontWeight": "bold",
+                      "fontSize": 15
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "font-presentation",
+                "fontPresentation": {
+                  "letterOverview": {
+                    "text": "Aa",
+                    "fontWeight": 400
+                  },
+                  "fontFamily": "AvenirNext",
+                  "textColor": "black",
+                  "bgColor": "#C9E6F8",
+                  "fonts": [
+                    {
+                      "text": "Avenir next regular",
+                      "fontWeight": "400"
+                    },
+                    {
+                      "text": "Avenir next Medium italic",
+                      "fontStyle": "italic",
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "images-list",
+            "imagesList": {
+              "bgColor": "#C9E6F8",
+              "images": [
+                {
+                  "src": "/images/projects/MAX/about-1.jpg",
+                  "alt": "about-1",
+                  "height": 331
+                },
+                {
+                  "src": "/images/projects/MAX/about-2.jpg",
+                  "alt": "about-2",
+                  "height": 331
+                },
+                {
+                  "src": "/images/projects/MAX/about-3.jpg",
+                  "alt": "about-3",
+                  "height": 331
+                }
+              ]
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/MAX/site-mockup.png",
+              "alt": "site-mockup",
+              "height": 687
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "tamara-agency",
+    "content": {
+      "name": "Tamara Agency",
+      "tags": ["DA", "Refont", "Social média"],
+      "description": [
+        "Tamara Agency est une agence de communication spécialisée dans la création de contenu pour les réseaux sociaux. Elle a besoin d'une identité visuelle et d'un site web pour se lancer."
+      ],
+      "heroImages": {
+        "height": 491,
+        "left": {
+          "src": "/images/projects/TAMARA_AGENCY/tamaraagency.png",
+          "alt": "tamara-1",
+          "width": 699,
+          "objectFit": "object-cover"
+        },
+        "right": {
+          "src": "/images/projects/TAMARA_AGENCY/mockup-ohone-TA.jpg",
+          "alt": "tamara-2",
+          "objectFit": "object-cover"
+        }
+      },
+      "project": {
+        "left": {
+          "image": {
+            "src": "/images/projects/TAMARA_AGENCY/TA-mockup-Site.png",
+            "alt": "TA-mockup-Site",
+            "height": 393,
+            "objectPosition": "center 30%"
+          },
+          "description": [
+            "Le challenge : Capturer la personnalité distinctive du client tout en renforçant sa crédibilité et son expertise dans son domaine.",
+            "Mots 🔑 : Pop - authentique"
+          ]
+        },
+        "right": [
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/TAMARA_AGENCY/ANNONCE.jpg",
+              "alt": "ANNONCE",
+              "height": 171
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/TAMARA_AGENCY/LOGO-CONCEPT.jpg",
+              "alt": "LOGO-CONCEPT",
+              "height": 608
+            }
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/TAMARA_AGENCY/PHOTO.jpg",
+                  "alt": "PHOTO",
+                  "height": 398,
+                  "width": 448
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/TAMARA_AGENCY/jaune.jpg",
+                  "alt": "jaune",
+                  "height": 120
+                }
+              },
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/TAMARA_AGENCY/rose.jpg",
+                  "alt": "rose",
+                  "height": 120
+                }
+              },
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/TAMARA_AGENCY/vert.jpg",
+                  "alt": "vert",
+                  "height": 120
+                }
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/TAMARA_AGENCY/CIBLE-VALEURS-SERVICES.jpg",
+              "alt": "CIBLE-VALEURS-SERVICES",
+              "height": 452
+            }
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/TAMARA_AGENCY/COULEURS.jpg",
+                  "alt": "COULEURS",
+                  "height": 392,
+                  "width": 329
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/TAMARA_AGENCY/TYPOGRAPHIES.jpg",
+                  "alt": "TYPOGRAPHIES",
+                  "height": 392
+                }
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/TAMARA_AGENCY/tamaraagency.png",
+              "alt": "tamaraagency",
+              "height": 318
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/TAMARA_AGENCY/mockup-prez-TA.png",
+              "alt": "mockup-prez-TA",
+              "height": 600
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/TAMARA_AGENCY/PRÉSENTATIONS.jpg",
+              "alt": "PRÉSENTATIONS",
+              "height": 783
+            }
+          }
+        ]
+      }
+    }
+  }
+]
