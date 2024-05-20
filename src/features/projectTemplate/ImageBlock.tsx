@@ -24,7 +24,8 @@ export function ImageBlock({
         fill
         quality={100}
         sizes={`(max-width: ${image?.width}px) 100vw, ${image?.width}px`}
-        className="rounded-[20px] object-cover"
+        className={`rounded-[20px] ${image?.objectFit || 'object-cover'}`}
+        style={{ objectPosition: image?.objectPosition }}
       />
     </div>
   );

@@ -9,29 +9,36 @@ export function ImagesListBlock({
   imagesList: ImagesListModel | undefined;
   index: number;
 }) {
-  const { bgColor, images } = imagesList ?? {};
+  const { bgColor, images, flexDirection, gap } = imagesList ?? {};
 
   return (
     <div
-      className={`${index > 0 ? 'mt-10' : ''} w-full px-[51px] py-[46px] rounded-[20px]`}
-      style={{ backgroundColor: bgColor }}
+      className={`${index > 0 ? 'mt-10' : ''} w-full px-[51px] py-[46px] rounded-[20px] flex ${flexDirection ?? 'flex-col'}`}
+      style={{
+        background: bgColor,
+        backgroundSize: 'cover',
+        gap: gap ?? 40,
+      }}
     >
       {images?.map((image, index) => (
         <div
           key={index}
-          className="relative"
+          className="relative grow"
           style={{
             height: image.height,
-            marginTop: index > 0 ? 40 : 0,
+            // width: image.width ?? '100%',
+            // marginTop: index > 0 ? 40 : 0,
           }}
         >
           <Image
             src={image.src}
             alt={image.alt}
             fill
+            loading="lazy"
             quality={100}
             sizes={`(max-width: 587px) 100vw, 587px`}
-            className="object-cover"
+            className={`${image.objectFit ?? 'object-cover'}`}
+            // style={{ objectFit: image.objectFit | }}
           />
         </div>
       ))}

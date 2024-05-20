@@ -16,6 +16,10 @@ module.exports = {
         GothamBook: ['Gotham-Book', 'sans-serif'],
         AvenirNext: ['AvenirNext', 'sans-serif'],
         DegularVariable: ['DegularVariable', 'sans-serif'],
+        Soleil: ['Soleil', 'sans-serif'],
+        Poppins: ['Poppins', 'sans-serif'],
+        Allotrope: ['Allotrope', 'sans-serif'],
+        Montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
         background: 'rgb(var(--background) / <alpha-value>)',
