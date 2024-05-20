@@ -25,6 +25,7 @@ export function FontPresentation({
         className="mb-2 leading-none tracking-wider lg:text-[80px] antialiased"
         style={{
           fontWeight: letterOverview?.fontWeight,
+          fontSize: letterOverview?.fontSize,
         }}
       >
         {letterOverview?.text}

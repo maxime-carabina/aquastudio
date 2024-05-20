@@ -1,5 +1,5 @@
 export type Item = {
-  colorName: string;
+  colorName?: string;
   colorHex: string;
   height?: number;
   textColor?: string;
@@ -9,12 +9,16 @@ export type Item = {
 export type ImageItem = {
   src: string;
   alt: string;
+  width?: number;
   height: number;
+  objectFit?: string;
 };
 
 export type ImagesListModel = {
   bgColor: string;
   images: ImageItem[];
+  flexDirection?: string;
+  gap?: number;
 };
 
 export type FontPresentationModel = {
@@ -22,6 +26,7 @@ export type FontPresentationModel = {
   letterOverview: {
     text: string;
     fontWeight: number | string;
+    fontSize?: number;
   };
   fontFamily: string;
   textColor: string;
@@ -33,6 +38,23 @@ export type FontPresentationModel = {
   }[];
 };
 
+export type InformationModel = {
+  title: string;
+  description: string;
+  timeMarker?: string;
+  bgColor: string;
+  textColor: string;
+};
+
+export type IconsListModel = {
+  icons: {
+    image: ImageItem;
+    name: string;
+  }[];
+  background: string;
+  textColor: string;
+};
+
 export type RightColContentModel = {
   type: string;
   image?: {
@@ -40,9 +62,15 @@ export type RightColContentModel = {
     alt: string;
     height: number;
     width?: number;
+    priority?: boolean;
+    objectFit?: string;
+    objectPosition?: string;
   };
+  textList?: string[];
+  information?: InformationModel;
   fontPresentation?: FontPresentationModel;
   imagesList?: ImagesListModel;
+  iconsList?: IconsListModel;
   item?: Item; // items is only used for type 'text'
   left?: RightColContentModel[];
   right?: RightColContentModel[];
@@ -56,7 +84,7 @@ export type ProjectModel = {
     description: string[];
     heroImages: {
       height: number;
-      left: {
+      left?: {
         src: string;
         alt: string;
         width: number;
@@ -68,6 +96,7 @@ export type ProjectModel = {
         alt: string;
         objectFit?: string;
         objectPosition?: string;
+        width: number;
       };
     };
     project: {

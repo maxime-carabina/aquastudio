@@ -19,7 +19,8 @@
         "right": {
           "src": "/images/projects/MAX/start.jpg",
           "alt": "start",
-          "objectFit": "object-cover"
+          "objectFit": "object-cover",
+          "width": 489
         }
       },
       "project": {
@@ -231,7 +232,8 @@
         "right": {
           "src": "/images/projects/TAMARA_AGENCY/mockup-ohone-TA.jpg",
           "alt": "tamara-2",
-          "objectFit": "object-cover"
+          "objectFit": "object-cover",
+          "width": 481
         }
       },
       "project": {
@@ -358,6 +360,655 @@
               "src": "/images/projects/TAMARA_AGENCY/PRÉSENTATIONS.jpg",
               "alt": "PRÉSENTATIONS",
               "height": 783
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "galbo",
+    "content": {
+      "name": "Galbo",
+      "tags": ["DA", "Packaging", "PLV"],
+      "description": ["Galbo est une marque de mode."],
+      "heroImages": {
+        "height": 490,
+        "left": {
+          "src": "/images/projects/GALBO/carte-2-galbo.jpg",
+          "alt": "carte-2-galbo",
+          "width": 368,
+          "objectFit": "object-cover"
+        },
+        "right": {
+          "src": "/images/projects/GALBO/HOME-PAGE.webp",
+          "alt": "HOME-PAGE",
+          "objectFit": "object-cover",
+          "width": 813
+        }
+      },
+      "project": {
+        "left": {
+          "image": {
+            "src": "/images/projects/GALBO/étiquette-2-galbo.png",
+            "alt": "étiquette-2-galbo",
+            "height": 489,
+            "objectPosition": "center 30%"
+          },
+          "description": [
+            "Le challenge : Capturer la personnalité distinctive du client tout en renforçant sa crédibilité et son expertise dans son domaine.",
+            "Mots 🔑 : Pop - authentique"
+          ]
+        },
+        "right": [
+          {
+            "type": "information",
+            "information": {
+              "title": "Branding",
+              "description": "Identité visuelle - tone of voice - stratégie",
+              "timeMarker": "Temps 01",
+              "bgColor": "#445D52",
+              "textColor": "white"
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/GALBO/Galbo_stratégie.webp",
+              "alt": "Galbo_stratégie",
+              "height": 708
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/GALBO/EXPLICATIONS-DA.webp",
+              "alt": "EXPLICATIONS-DA",
+              "height": 727
+            }
+          },
+          {
+            "type": "images-list",
+            "imagesList": {
+              "bgColor": "url('/images/projects/GALBO/marble-background.svg')",
+              "images": [
+                {
+                  "src": "/images/projects/GALBO/Green.svg",
+                  "alt": "about-1",
+                  "height": 213,
+                  "objectFit": "object-none"
+                },
+                {
+                  "src": "/images/projects/GALBO/Blue.svg",
+                  "alt": "about-2",
+                  "height": 213,
+                  "objectFit": "object-none"
+                },
+                {
+                  "src": "/images/projects/GALBO/Beige.svg",
+                  "alt": "about-3",
+                  "height": 213,
+                  "objectFit": "object-none"
+                }
+              ]
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/GALBO/packaging-galbo.jpg",
+              "alt": "packaging-galbo",
+              "height": 468
+            }
+          },
+          {
+            "type": "information",
+            "information": {
+              "title": "Le site web",
+              "description": "Recherche utilisateur - refonte - CRO",
+              "timeMarker": "Temps 02",
+              "bgColor": "#445D52",
+              "textColor": "white"
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/GALBO/Galbo_bannière_mockup.webp",
+              "alt": "Galbo_bannière_mockup",
+              "height": 616
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/GALBO/Galbo_megamenu_mockup.jpg",
+              "alt": "Galbo_megamenu_mockup",
+              "height": 622,
+              "objectPosition": "center 30%"
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/GALBO/NOS-ICONIQES.jpg",
+              "alt": "NOS-ICONIQES",
+              "height": 634
+            }
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/GALBO/Galbo_unisex_mockup.jpg",
+                  "alt": "Galbo_unisex_mockup",
+                  "height": 445
+                }
+              },
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/GALBO/Galbo_mockup_phone.jpg",
+                  "alt": "Galbo_mockup_phone",
+                  "height": 672
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/GALBO/mobile-page-produit.jpg",
+                  "alt": "mobile-page-produit",
+                  "height": 1151,
+                  "objectFit": "object-contain"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text-list",
+            "textList": [
+              "Format vidéo (reprise des reel instagram) : Permet de visualiser le produit en action en temps réel Renforçe l'engagement de vos clients.",
+              "Le prix : Doit être facilement accessible près du titre, même si  celui-ci est déjà inclus dans le CTA de façon sticky.",
+              "Création de valeurs : Les bénéfices produit sont visibles instantanément d'un simple coup d'œil !",
+              "Preuve sociale : Mise en avant des avis clients (cliquable) Cela vient  rassurer sur l’authenticité de ces avis.",
+              "Menu déroulant : Rendre le tout plus digeste.",
+              "Cross selling : Présentation des suggestions d'articles complémentaires pour enrichir l’achat, favorisant ainsi une augmentation significative de votre panier moyen."
+            ]
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/GALBO/Galbo_panier_mockup.jpg",
+              "alt": "Galbo_panier_mockup",
+              "height": 613,
+              "objectPosition": "bottom"
+            }
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/GALBO/ELLES-PORTENT.webp",
+              "alt": "ELLES-PORTENT",
+              "height": 554
+            }
+          },
+          {
+            "type": "information",
+            "information": {
+              "title": "Pour aller plus loin",
+              "description": "Shooting photo & social média",
+              "bgColor": "#445D52",
+              "textColor": "white"
+            }
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/GALBO/MOODBOARD-SHOOTING-01.webp",
+                  "alt": "MOODBOARD-SHOOTING-01",
+                  "height": 379
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/GALBO/MOODBOARD-SHOOTING-02.webp",
+                  "alt": "MOODBOARD-SHOOTING-02",
+                  "height": 379
+                }
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/GALBO/GALBO_RS.webp",
+              "alt": "GALBO_RS",
+              "height": 802,
+              "objectFit": ""
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "latypique",
+    "content": {
+      "name": "L.atypique",
+      "tags": ["UX/UI", "Maquettes figma", "Choix de thème"],
+      "description": ["L'atypique est une marque de cosmétique."],
+      "heroImages": {
+        "height": 503,
+        "left": {
+          "src": "/images/projects/LATYPIQUE/HOME-PAGE-DESCKTOP.webp",
+          "alt": "HOME-PAGE-DESCKTOP",
+          "width": 695,
+          "objectFit": "object-cover"
+        },
+        "right": {
+          "src": "/images/projects/LATYPIQUE/mockup-macbook.jpg",
+          "alt": "mockup-macbook",
+          "objectFit": "object-cover",
+          "width": 485
+        }
+      },
+      "project": {
+        "left": {
+          "image": {
+            "src": "/images/projects/LATYPIQUE/mockup-2-latypique.jpg",
+            "alt": "mockup-2-latypique",
+            "height": 404,
+            "objectPosition": "center"
+          },
+          "description": [
+            "Le challenge : Capturer la personnalité distinctive du client tout en renforçant sa crédibilité et son expertise dans son domaine.",
+            "Mots 🔑 : Pop - authentique"
+          ]
+        },
+        "right": [
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/LATYPIQUE/Presentation.webp",
+              "alt": "Presentation",
+              "height": 452,
+              "objectFit": ""
+            }
+          },
+          {
+            "type": "images-list",
+            "imagesList": {
+              "bgColor": "#D8CABF",
+              "images": [
+                {
+                  "src": "/images/projects/LATYPIQUE/SHOP-THE-LOOK.jpg",
+                  "alt": "about-1",
+                  "height": 307
+                }
+              ]
+            }
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/LATYPIQUE/Buttons.webp",
+                  "alt": "Buttons",
+                  "height": 402
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/LATYPIQUE/mockup-latypique.jpg",
+                  "alt": "mockup-latypique",
+                  "height": 402
+                }
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/LATYPIQUE/mockup-iphone.jpg",
+                  "alt": "mockup-iphone",
+                  "height": 486
+                }
+              },
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/LATYPIQUE/creme.jpg",
+                  "alt": "creme",
+                  "height": 490,
+                  "objectPosition": "bottom"
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/LATYPIQUE/PAGE-PRODUIT-MOBILE.jpg",
+                  "alt": "PAGE-PRODUIT-MOBILE",
+                  "height": 1010,
+                  "objectFit": "object-contain"
+                }
+              }
+            ]
+          },
+          {
+            "type": "icons-list",
+            "iconsList": {
+              "background": "white",
+              "textColor": "black",
+              "icons": [
+                {
+                  "image": {
+                    "src": "/images/projects/LATYPIQUE/ICONES/PAIEMENT-SÉCURISÉ.svg",
+                    "alt": "PAIEMENT-SÉCURISÉ",
+                    "width": 42,
+                    "height": 43
+                  },
+                  "name": "Paiement sécurisé"
+                },
+                {
+                  "image": {
+                    "src": "/images/projects/LATYPIQUE/ICONES/LIVRAISON.svg",
+                    "alt": "LIVRAISON",
+                    "width": 51,
+                    "height": 40
+                  },
+                  "name": "Livraison express et point relais"
+                },
+                {
+                  "image": {
+                    "src": "/images/projects/LATYPIQUE/ICONES/CARTE.svg",
+                    "alt": "CARTE",
+                    "width": 52,
+                    "height": 38
+                  },
+                  "name": "Paiement en plusieurs fois"
+                },
+                {
+                  "image": {
+                    "src": "/images/projects/LATYPIQUE/ICONES/CONNEXION.svg",
+                    "alt": "CONNEXION",
+                    "width": 39,
+                    "height": 41
+                  },
+                  "name": "Service personnal shopper"
+                }
+              ]
+            }
+          },
+          {
+            "type": "images-list",
+            "imagesList": {
+              "bgColor": "#D8CABF",
+              "images": [
+                {
+                  "src": "/images/projects/LATYPIQUE/Aperçu-siteweb.webp",
+                  "alt": "Aperçu-siteweb",
+                  "height": 262
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "brigitte",
+    "content": {
+      "name": "Brigitte",
+      "tags": ["DA", "Packaging", "PLV"],
+      "description": [
+        "Brigitte incarne le concept d'un food truck parisien, avec une application pour des commandes simplifiées et le suivi en temps réel de leur emplacement.",
+        "Leur communication souligne l'importance des rencontres et la satisfaction de bien manger, comparant cette expérience à un moment amoureux.",
+        "“Chez Brigitte, on ne swipe pas des profils pour une conquête, mais pour savourer de bons plats.”"
+      ],
+      "heroImages": {
+        "height": 513,
+        "right": {
+          "src": "/images/projects/BRIGITTE/Bannière.webp",
+          "alt": "Bannière",
+          "objectFit": "object-cover",
+          "width": 1230
+        }
+      },
+      "project": {
+        "left": {
+          "image": {
+            "src": "/images/projects/BRIGITTE/Brigitte_carte_mockups.png",
+            "alt": "Brigitte_carte_mockups",
+            "height": 489,
+            "objectPosition": "center"
+          },
+          "description": [
+            "Le challenge : Concevoir une identité mémorable et distinctive. Produire diverses déclinaisons telles que des publications pour les réseaux sociaux et des affiches.",
+            "Mots 🔑 : Vintage - mascotte - coloré"
+          ]
+        },
+        "right": [
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/BRIGITTE/LOGO.jpg",
+              "alt": "LOGO",
+              "height": 375
+            }
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/BRIGITTE/affiche-2-mockup.jpg",
+                  "alt": "affiche-2-mockup",
+                  "height": 443,
+                  "width": 443
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "font-presentation",
+                "fontPresentation": {
+                  "height": 213,
+                  "letterOverview": {
+                    "text": "Aa",
+                    "fontWeight": "700",
+                    "fontSize": 60
+                  },
+                  "fontFamily": "Allotrope",
+                  "textColor": "white",
+                  "bgColor": "#2A6088",
+                  "fonts": [
+                    {
+                      "text": "Allotrope",
+                      "fontWeight": "bold",
+                      "fontSize": 14
+                    },
+                    {
+                      "text": "bold",
+                      "fontWeight": "Bold",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "font-presentation",
+                "fontPresentation": {
+                  "height": 213,
+                  "letterOverview": {
+                    "text": "Aa",
+                    "fontWeight": "normal",
+                    "fontSize": 60
+                  },
+                  "fontFamily": "Montserrat, sans-serif",
+                  "textColor": "white",
+                  "bgColor": "#ED7D1A",
+                  "fonts": [
+                    {
+                      "text": "Montserrat",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "text": "Regular",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "images-list",
+            "imagesList": {
+              "bgColor": "#2A6088",
+              "flexDirection": "flex-row",
+              "gap": 24,
+              "images": [
+                {
+                  "src": "/images/projects/BRIGITTE/AFFICHE-2.jpg",
+                  "alt": "AFFICHE-2",
+                  "height": 425
+                },
+                {
+                  "src": "/images/projects/BRIGITTE/POSTER.webp",
+                  "alt": "POSTER",
+                  "height": 425
+                }
+              ]
+            }
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "text",
+                "item": {
+                  "colorHex": "#2A6088",
+                  "textColor": "white",
+                  "fontFamily": "AvenirNext"
+                }
+              },
+              {
+                "type": "text",
+                "item": {
+                  "colorHex": "#C72022",
+                  "textColor": "white",
+                  "fontFamily": "AvenirNext"
+                }
+              },
+              {
+                "type": "text",
+                "item": {
+                  "colorHex": "#ED7D1A",
+                  "textColor": "white",
+                  "fontFamily": "AvenirNext"
+                }
+              },
+              {
+                "type": "text",
+                "item": {
+                  "colorHex": "#FEF2E8",
+                  "textColor": "#015982",
+                  "fontFamily": "AvenirNext"
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/BRIGITTE/Brigitte_mockup-Menu.jpg",
+                  "alt": "Brigitte_mockup-Menu",
+                  "height": 467,
+                  "width": 419
+                }
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "left": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/BRIGITTE/ticket-de-commande-mockup.jpg",
+                  "alt": "ticket-de-commande-mockup",
+                  "height": 407,
+                  "width": 407
+                }
+              }
+            ],
+            "right": [
+              {
+                "type": "image",
+                "image": {
+                  "src": "/images/projects/BRIGITTE/Logo-secondaire.webp",
+                  "alt": "Logo-secondaire",
+                  "height": 407
+                }
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/images/projects/BRIGITTE/mockup-appli-brigitte.jpg",
+              "alt": "mockup-appli-brigitte",
+              "height": 442
+            }
+          },
+          {
+            "type": "images-list",
+            "imagesList": {
+              "bgColor": "#ED7D1A",
+              "flexDirection": "flex-row",
+              "gap": 50,
+              "images": [
+                {
+                  "src": "/images/projects/BRIGITTE/CHARGEMENT.webp",
+                  "alt": "CHARGEMENT",
+                  "height": 376,
+                  "objectFit": ""
+                },
+                {
+                  "src": "/images/projects/BRIGITTE/ARRIVÉE.jpg",
+                  "alt": "ARRIVÉE",
+                  "height": 376,
+                  "objectFit": ""
+                },
+                {
+                  "src": "/images/projects/BRIGITTE/PAGE-D'ACCUEIL.webp",
+                  "alt": "PAGE-D'ACCUEIL",
+                  "height": 376,
+                  "objectFit": ""
+                }
+              ]
             }
           }
         ]

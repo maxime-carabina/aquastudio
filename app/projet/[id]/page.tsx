@@ -13,7 +13,12 @@ import {
 } from '@/components';
 import projectsData from '@/src/assets/projects/projects.json';
 import { FlexBox, ImagesListBlock } from '@/src/features/projectTemplate';
-import { ProjectModel, RightColContentModel } from '@/src/models';
+import {
+  ProjectModel,
+  RightColContentModel,
+  InformationModel,
+  IconsListModel,
+} from '@/src/models';
 
 export async function generateStaticParams() {
   return projectsData.map((p) => ({
@@ -69,6 +74,91 @@ const PROJECTS = [
   },
 ];
 
+function InformationBlock({
+  information,
+  index,
+}: {
+  information: InformationModel | undefined;
+  index: number;
+}) {
+  const { title, description, timeMarker, bgColor, textColor } =
+    information || {};
+
+  return (
+    <div
+      className={`${index > 0 ? 'mt-10' : ''} grow flex justify-between font-Soleil lg:text-[20px] px-11 py-8 rounded-[20px] antialiased`}
+      style={{ background: bgColor, color: textColor }}
+    >
+      <div>
+        <p className="uppercase font-normal">{title}</p>
+        <p className="font-light italic">{description}</p>
+      </div>
+      <p className="uppercase font-normal">{timeMarker}</p>
+    </div>
+  );
+}
+
+function TextListBlock({
+  textList,
+  index,
+}: {
+  textList: string[] | undefined;
+  index: number;
+}) {
+  return (
+    <div
+      className={`${index > 0 ? 'mt-10' : ''} grow relative bg-[#445D52] px-9 py-12 rounded-[20px]`}
+    >
+      <ul className="list-decimal text-white max-w-[619px] m-auto antialiased">
+        {textList?.map((text, index) => {
+          const newArr = text.split(' : ');
+
+          return (
+            <li
+              key={index}
+              className={`font-Soleil lg:text-[20px] ${index > 0 ? 'mt-8' : ''}`}
+            >
+              <span className="font-bold lg:text-[22px]">{newArr[0]} : </span>
+              {newArr[1]}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+function IconsListBlock({
+  iconsList,
+  index,
+}: {
+  iconsList: IconsListModel | undefined;
+  index: number;
+}) {
+  const { icons, background, textColor } = iconsList || {};
+
+  return (
+    <div
+      className={`${index > 0 ? 'mt-10' : ''} grow relative px-9 py-[53px] rounded-[20px]`}
+      style={{ background: background }}
+    >
+      <ul className="list-none flex justify-between">
+        {icons?.map((icon, index) => (
+          <li key={index} className="flex flex-col items-center gap-5">
+            <img src={icon.image.src} alt={icon.image.alt} height={43} />
+            <p
+              className="font-Poppins lg:text-[10px] max-w-28 text-center antialiased"
+              style={{ color: textColor }}
+            >
+              {icon.name}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function RightColScrollable({
   rightContent,
 }: {
@@ -80,6 +170,29 @@ function RightColScrollable({
         const type = content.type;
 
         if (type === 'image') {
+          const { image } = content;
+
+          if (image?.priority) {
+            return (
+              <div
+                key={index}
+                className={`${index > 0 ? 'mt-10' : ''} w-full relative`}
+                style={{ height: image?.height }}
+              >
+                <Image
+                  src={image.src || '/images/lpp-baumes.jpg'}
+                  alt={image.alt || 'aqua-studio'}
+                  fill
+                  priority
+                  // quality={100}
+                  sizes={`(max-width: 493px) 100vw, 493px`}
+                  className={`rounded-[20px] ${image.objectFit ?? 'object-cover'}`}
+                  style={{ objectPosition: image.objectPosition }}
+                />
+              </div>
+            );
+          }
+
           return (
             <div
               key={index}
@@ -90,9 +203,11 @@ function RightColScrollable({
                 src={content.image?.src || '/images/lpp-baumes.jpg'}
                 alt={content.image?.alt || 'aqua-studio'}
                 fill
-                quality={100}
+                loading="lazy"
+                // quality={100}
                 sizes={`(max-width: 493px) 100vw, 493px`}
-                className="rounded-[20px] object-cover"
+                className={`rounded-[20px] ${image?.objectFit ?? 'object-cover'}`}
+                style={{ objectPosition: image?.objectPosition }}
               />
             </div>
           );
@@ -104,6 +219,30 @@ function RightColScrollable({
               key={index}
               index={index}
               imagesList={content.imagesList}
+            />
+          );
+        } else if (type === 'information') {
+          return (
+            <InformationBlock
+              key={index}
+              index={index}
+              information={content.information}
+            />
+          );
+        } else if (type === 'text-list') {
+          return (
+            <TextListBlock
+              key={index}
+              index={index}
+              textList={content.textList}
+            />
+          );
+        } else if (type === 'icons-list') {
+          return (
+            <IconsListBlock
+              key={index}
+              index={index}
+              iconsList={content.iconsList}
             />
           );
         }
@@ -138,7 +277,8 @@ function LeftColSticky({
           src={project.image.src}
           alt={project.image.alt}
           fill
-          quality={100}
+          loading="lazy"
+          // quality={100}
           sizes={`(max-width: 493px) 100vw, 493px`}
           className="rounded-[20px] object-cover"
           style={{
@@ -257,7 +397,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   return (
     <div className="text-f-primary">
       <div className="px-[22px] md:px-16 lg:px-28 mt-12 lg:mb-[70px] lg:mt-[74px] text-f-primary">
-        <div className="lg:mb-[70px] flex items-end justify-between antialiased">
+        <div className="lg:mb-[70px] flex items-start justify-between antialiased">
           <div>
             <h1 className="lg:mb-[30px] aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[75px] uppercase max-w-[500px]">
               {name}
@@ -283,29 +423,38 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           </div>
         </div>
         <div className="flex items-center gap-[50px]">
-          <div
-            style={{ width: heroImages?.left.width }}
-            className={`h-[${heroImages?.height.toString()}px] relative`}
-          >
-            <Image
-              src={heroImages.left.src || '/images/lpp-baumes.jpg'}
-              alt={heroImages.left.alt || 'aqua-studio'}
-              quality={100}
-              fill
-              sizes={`(max-width: ${heroImages?.left.width}px) 100vw, ${heroImages?.left.width}px`}
-              className={`rounded-[20px] ${heroImages?.left.objectFit}`}
+          {heroImages?.left && (
+            <div
               style={{
-                objectPosition: heroImages?.left.objectPosition,
+                width: heroImages?.left.width,
+                height: heroImages?.height,
               }}
-            />
-          </div>
-          <div className={`grow h-[${heroImages?.height}px] relative`}>
+              className={`relative`}
+            >
+              <Image
+                src={heroImages.left.src || '/images/lpp-baumes.jpg'}
+                alt={heroImages.left.alt || 'aqua-studio'}
+                // quality={100}
+                fill
+                loading="lazy"
+                // priority
+                sizes={`(max-width: ${heroImages?.left.width}px) 100vw, ${heroImages?.left.width}px`}
+                className={`rounded-[20px] ${heroImages?.left.objectFit}`}
+                style={{
+                  objectPosition: heroImages?.left.objectPosition,
+                }}
+              />
+            </div>
+          )}
+          <div style={{ height: heroImages?.height }} className="grow relative">
             <Image
               src={heroImages.right.src || '/images/lpp-baumes.jpg'}
               alt={heroImages.right.alt || 'aqua-studio'}
-              quality={100}
+              // quality={100}
               fill
-              sizes={`(max-width: ${heroImages?.left.width}px) 100vw, ${heroImages?.left.width}px`}
+              // loading="lazy"
+              priority
+              sizes={`(max-width: ${heroImages?.right.width}px) 100vw, ${heroImages.right.width}px`}
               className={`rounded-[20px] ${heroImages?.right.objectFit}`}
               style={{
                 objectPosition: heroImages.right.objectPosition,
