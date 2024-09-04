@@ -1,61 +1,52 @@
-'use client';
+import { forwardRef } from 'react';
 
-import { ReactNode, ComponentPropsWithoutRef } from 'react';
+import { Slot } from '@radix-ui/react-slot';
+import { cva, type VariantProps } from 'class-variance-authority';
 
-interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
-  children?: ReactNode;
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'icon';
-  model?: 'border' | 'single';
-  customClass?: string;
+import { cn } from '@/lib/utils';
+
+const buttonVariants = cva(
+  'default-button text-[14px] px-3 py-2 lg:px-4 lg:py-2 lg:text-[20px] antialiased', //px-2 py-1
+  {
+    variants: {
+      variant: {
+        default:
+          'bg-primary text-f-secondary border-secondary hover:text-f-primary hover:shadow-[inset_25rem_0_0_0] lg:hover:shadow-secondary duration-500 transition-[color,box-shadow]',
+        secondary:
+          'bg-secondary text-f-primary border-primary z-0 hover:text-f-secondary hover:shadow-[inset_25rem_0_0_0] lg:hover:shadow-primary duration-500 transition-[color, box-shadow]',
+        tertiary: 'bg-secondary text-f-primary border-tertiary',
+        outline:
+          'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
+        icon: 'w-16 h-16 bg-primary text-f-secondary border-0',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+    },
+  },
+);
+
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
 }
 
-export function ButtonIcon(props: ButtonProps) {
-  const { children, model = 'single', customClass, ...rest } = props;
+const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+  const { variant, className, asChild = false, ...rest } = props;
 
-  const models: Models = {
-    single: 'border-0 bg-primary',
-  };
-
-  interface Models {
-    [key: string]: string | object;
-  }
+  const Comp = asChild ? Slot : 'button';
 
   return (
-    <button
-      data-testid="button"
+    <Comp
+      ref={ref}
       type="button"
-      className={`default-button default-icon ${models[model]} ${customClass}`}
+      className={cn(buttonVariants({ variant, className }))}
       {...rest}
-    >
-      <div className="w-fit m-auto flex gap-2 items-baseline">{children}</div>
-    </button>
+    />
   );
-}
+});
 
-export function Button(props: ButtonProps) {
-  const { children, variant = 'primary', customClass, ...rest } = props;
+Button.displayName = 'Button';
 
-  interface Classes {
-    [key: string]: string | object;
-  }
-
-  const classes: Classes = {
-    primary: 'default-primary',
-    secondary: 'default-secondary',
-    tertiary: 'default-tertiary',
-  };
-
-  const isIcon = variant === 'icon';
-
-  return isIcon ? (
-    <ButtonIcon {...props} />
-  ) : (
-    <button
-      type="button"
-      className={`default-button text-[10px] px-2 py-1 lg:px-4 lg:py-2 lg:text-[20px] ${classes[variant]} ${customClass}`}
-      {...rest}
-    >
-      {children}
-    </button>
-  );
-}
+export { Button };

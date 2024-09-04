@@ -15,7 +15,7 @@ export default function ContactPage() {
               👋
             </span>
           </h1>
-          <h2 className="antialiased aqua-title text-[16px] lg:text-[25px]">
+          <h2 className="antialiased font-GothamLight font-medium text-[16px] lg:text-[25px]">
             Je suis disponible du lundi au vendredi.
           </h2>
         </div>

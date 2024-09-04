@@ -257,7 +257,7 @@ function RightColScrollable({
         N’hésites pas à me contacter pour discuter de ton projet !!
       </h2>
       <div className="max-w-96">
-        <Button variant="secondary" customClass="antialiased">
+        <Button variant="secondary" className="antialiased">
           Je suis intéressé(e) par ton travail !
         </Button>
       </div>
@@ -404,7 +404,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             </h1>
             <div className="flex flex-wrap gap-3 max-w-72 lg:max-w-none lg:gap-5">
               {tags.map((tag, index) => (
-                <Button key={index} customClass="w-fit" variant="secondary">
+                <Button key={index} className="w-fit" variant="secondary">
                   {tag}
                 </Button>
               ))}

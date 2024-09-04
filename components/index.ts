@@ -11,3 +11,4 @@ export * from './SkillsList';
 export * from './Accordion';
 export * from './TextArea';
 export * from './Input';
+export * from './Tooltip';

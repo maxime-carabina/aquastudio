@@ -54,7 +54,7 @@
   .default-primary {
     @apply bg-primary text-f-secondary border-secondary
           hover:text-f-primary
-          hover:shadow-[inset_25rem_0_0_0] hover:shadow-secondary duration-500 transition-[color,box-shadow];
+          hover:shadow-[inset_25rem_0_0_0] lg:hover:shadow-secondary duration-500 transition-[color,box-shadow];
     /* hover:shadow-[inset_16rem_0_0_0] */
   }
 
@@ -79,7 +79,7 @@
   } */
 
   .default-tab {
-    @apply aqua-menu-default text-[12px] lg:text-[25px] antialiased py-[5px] text-f-primary relative cursor-pointer;
+    @apply aqua-menu-default text-[16px] lg:text-[25px] antialiased py-[5px] text-f-primary relative cursor-pointer;
   }
 
   .default-tab::after {
@@ -96,18 +96,187 @@
     @apply content-[''] h-[1.5px] w-full bg-primary absolute left-0 bottom-0 pointer-events-none;
   }
 
-  .default-navbar {
-    @apply aqua-caption antialiased px-3 py-1 w-fit text-f-primary transition-colors duration-300 ease-in-out
-    hover:text-f-secondary;
-    /* hover:bg-primary hover:rounded-[5px]; hover:bg-primary hover:rounded-[5px]; */
+  .default-nav a:is(:focus-visible, :hover),
+  .default-nav ul:has(a:target:is(:focus-visible, :hover))::after {
+    @apply text-f-secondary bg-primary outline-none z-[5];
   }
 
-  .default-navbar-active {
-    @apply text-f-secondary bg-primary rounded-[2.5px];
+  .default-nav .active {
+    @apply text-f-secondary bg-primary;
   }
 
-  .menu-shape {
-    @apply absolute z-10 top-0 left-0 right-0 bottom-0 w-full h-full bg-primary rounded-[2.5px] transition-all duration-300 ease-in-out;
+  [data-no-anchor]
+    .default-nav
+    ul:has(li:nth-of-type(1) a:is(:hover, :focus-visible)) {
+    --item-active-y: var(--item-1-y);
+    --item-active-x: var(--item-1-x);
+    --item-active-width: var(--item-1-width);
+    --item-active-height: var(--item-1-height);
+  }
+  [data-no-anchor]
+    .default-nav
+    ul:has(li:nth-of-type(2) a:is(:hover, :focus-visible)) {
+    --item-active-y: var(--item-2-y);
+    --item-active-x: var(--item-2-x);
+    --item-active-width: var(--item-2-width);
+    --item-active-height: var(--item-2-height);
+  }
+  [data-no-anchor]
+    .default-nav
+    ul:has(li:nth-of-type(3) a:is(:hover, :focus-visible)) {
+    --item-active-y: var(--item-3-y);
+    --item-active-x: var(--item-3-x);
+    --item-active-width: var(--item-3-width);
+    --item-active-height: var(--item-3-height);
+  }
+  [data-no-anchor]
+    .default-nav
+    ul:has(li:nth-of-type(4) a:is(:hover, :focus-visible)) {
+    --item-active-y: var(--item-4-y);
+    --item-active-x: var(--item-4-x);
+    --item-active-width: var(--item-4-width);
+    --item-active-height: var(--item-4-height);
+  }
+
+  [data-no-anchor] .default-nav ul:has(li:nth-of-type(1) a:target) {
+    --target-y: var(--item-1-y);
+    --target-x: var(--item-1-x);
+    --target-width: var(--item-1-width);
+    --target-height: var(--item-1-height);
+  }
+  [data-no-anchor] .default-nav ul:has(li:nth-of-type(2) a:target) {
+    --target-y: var(--item-2-y);
+    --target-x: var(--item-2-x);
+    --target-width: var(--item-2-width);
+    --target-height: var(--item-2-height);
+  }
+  [data-no-anchor] .default-nav ul:has(li:nth-of-type(3) a:target) {
+    --target-y: var(--item-3-y);
+    --target-x: var(--item-3-x);
+    --target-width: var(--item-3-width);
+    --target-height: var(--item-3-height);
+  }
+  [data-no-anchor] .default-nav ul:has(li:nth-of-type(4) a:target) {
+    --target-y: var(--item-4-y);
+    --target-x: var(--item-4-x);
+    --target-width: var(--item-4-width);
+    --target-height: var(--item-4-height);
+  }
+
+  .default-nav ul:has(a:is(:focus-visible, :hover)) {
+    --intent: 1;
+  }
+
+  .default-nav ul::before,
+  .default-nav ul::after {
+    @apply content-[''] fixed pointer-events-none z-0 rounded-md bg-primary;
+
+    --transition: 0.18s;
+    top: calc(var(--item-active-y) * 1px);
+    left: calc(var(--item-active-x) * 1px);
+    height: calc(var(--item-active-height) * 1px);
+    width: calc(var(--item-active-width) * 1px);
+    opacity: var(--intent, 0);
+    transition:
+      all var(--transition),
+      top var(--transition),
+      left var(--transition),
+      height var(--transition),
+      opacity var(--transition),
+      color var(--transition),
+      width var(--transition);
+    transition-timing-function: linear(
+      0 0%,
+      0.2342 12.49%,
+      0.4374 24.99%,
+      0.6093 37.49%,
+      0.6835 43.74%,
+      0.7499 49.99%,
+      0.8086 56.25%,
+      0.8593 62.5%,
+      0.9023 68.75%,
+      0.9375 75%,
+      0.9648 81.25%,
+      0.9844 87.5%,
+      0.9961 93.75%,
+      1 100%
+    );
+  }
+
+  .default-nav ul::after {
+    @apply opacity-100 bg-transparent rounded-none;
+
+    top: calc(var(--target-y) * 1px);
+    left: calc((var(--target-x) * 1px) + 1.25rem);
+    height: calc(var(--target-height) * 1px);
+    width: calc((var(--target-width) * 1px) - 2.5rem);
+    view-transition-name: target;
+    /* border-bottom: 2px solid green; */
+  }
+
+  /* Targeting */
+  @supports (anchor-name: --a) {
+    .default-nav {
+      --anchor: var(--item-active);
+    }
+
+    .default-nav li:nth-of-type(1) {
+      anchor-name: --item-1;
+    }
+    .default-nav li:nth-of-type(2) {
+      anchor-name: --item-2;
+    }
+    .default-nav li:nth-of-type(3) {
+      anchor-name: --item-3;
+    }
+    .default-nav li:nth-of-type(4) {
+      anchor-name: --item-4;
+    }
+
+    .default-nav:has(li:nth-of-type(1) a:is(:hover, :focus-visible)) {
+      --anchor: --item-1;
+    }
+    .default-nav:has(li:nth-of-type(2) a:is(:hover, :focus-visible)) {
+      --anchor: --item-2;
+    }
+    .default-nav:has(li:nth-of-type(3) a:is(:hover, :focus-visible)) {
+      --anchor: --item-3;
+    }
+    .default-nav:has(li:nth-of-type(4) a:is(:hover, :focus-visible)) {
+      --anchor: --item-4;
+    }
+
+    .default-nav:has(li:nth-of-type(1) a:target) {
+      --target: --item-1;
+    }
+    .default-nav:has(li:nth-of-type(2) a:target) {
+      --target: --item-2;
+    }
+    .default-nav:has(li:nth-of-type(3) a:target) {
+      --target: --item-3;
+    }
+    .default-nav:has(li:nth-of-type(4) a:target) {
+      --target: --item-4;
+    }
+
+    .default-nav ul::before {
+      left: anchor(var(--anchor) left);
+      top: anchor(var(--anchor) top);
+      width: anchor-size(var(--anchor) width);
+      height: anchor-size(var(--anchor) height);
+    }
+
+    .default-nav ul::after {
+      left: calc(anchor(var(--target) left) + 1.25rem);
+      top: anchor(var(--target) top);
+      width: calc(anchor-size(var(--target) width) - 2.5rem);
+      height: anchor-size(var(--target) height);
+    }
+  }
+
+  ::view-transition-group(target),
+  ::view-transition-group(item) {
+    mix-blend-mode: normal;
   }
 }
 
@@ -140,7 +309,7 @@
 }
 
 @font-face {
-  font-family: 'Gotham';
+  font-family: 'Gotham-Light';
   src: url('../public/fonts/Gotham-Font/Gotham-Light.otf');
   font-weight: 500;
   /* font-style: normal; */
@@ -204,7 +373,6 @@
 }
 
 /* Allotrope */
-
 @font-face {
   font-family: 'Allotrope';
   src: url('../public/fonts/Allotrope/Allotrope-bold.otf');

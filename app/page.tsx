@@ -1,3 +1,7 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,10 +18,11 @@ import {
   CarouselPrevious,
   SkillType,
   Accordion,
+  Tooltip,
 } from '@/components';
 import Logo from '@/src/assets/test.png';
 
-const TAGS = ['DA', 'Print et packaging', 'Social média', 'UXUI design', 'CRO'];
+const TAGS = ['DA', 'Social média', 'UXUI design', 'Print et packaging', 'CRO'];
 
 const PROJECTS = [
   {
@@ -32,37 +37,40 @@ const PROJECTS = [
     contentButton: 'Beauté ✨',
   },
   {
-    width: 621,
+    width: 470,
     height: 481,
+    mobileHeight: 285,
     img: {
-      url: '/images/lpp-baumes.jpg',
-      alt: 'lpp-baumes',
-      objectFit: 'object-none',
-      objectPosition: 'object-[center_85%]',
+      url: '/images/projects/BRIGITTE/Brigitte_carte_mockups.png',
+      alt: 'Brigitte_carte_mockups',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
     },
-    contentButton: 'Beauté ✨',
+    contentButton: 'Food 🍔',
+  },
+  {
+    width: 481,
+    height: 481,
+    mobileHeight: 219,
+    img: {
+      url: '/images/projects/TAMARA_AGENCY/mockup-ohone-TA.jpg',
+      alt: 'mockup-ohone-TA',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
+    },
+    contentButton: 'Web 📱',
   },
   {
     width: 621,
     height: 481,
+    mobileHeight: 335,
     img: {
-      url: '/images/lpp-baumes.jpg',
-      alt: 'lpp-baumes',
-      objectFit: 'object-none',
-      objectPosition: 'object-[center_85%]',
+      url: '/images/projects/GALBO/étiquette-2-galbo.png',
+      alt: 'étiquette-2-galbo',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
     },
-    contentButton: 'Beauté ✨',
-  },
-  {
-    width: 621,
-    height: 481,
-    img: {
-      url: '/images/lpp-baumes.jpg',
-      alt: 'lpp-baumes',
-      objectFit: 'object-none',
-      objectPosition: 'object-[center_85%]',
-    },
-    contentButton: 'Beauté ✨',
+    contentButton: 'Mode 🛍️',
   },
 ];
 
@@ -136,8 +144,8 @@ export default function Home() {
             {PROJECTS.map((project, index) => (
               <ProjectCard
                 key={index}
-                width={'100%'}
-                height={236}
+                width={'auto'}
+                height={project.mobileHeight || 236}
                 img={project.img}
                 contentButton={project.contentButton}
               />
@@ -174,7 +182,7 @@ export default function Home() {
               <ProjectCard
                 key={index}
                 width={'100%'}
-                height={236}
+                height={project.mobileHeight || 236}
                 img={project.img}
                 contentButton={project.contentButton}
               />
@@ -185,36 +193,56 @@ export default function Home() {
     },
   ];
 
+  const [scrollTextOpacity, setScrollTextOpacity] = useState(1);
+
+  const handleScroll = () => {
+    setScrollTextOpacity(window.scrollY > 15 ? 0 : 1);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <main className="w-full">
-      <div className="px-[22px] md:px-16 lg:px-28 pt-5 min-h-screen h-fit bg-primary">
+      <section className="px-[22px] md:px-16 lg:px-28 pt-5 min-h-screen h-fit bg-primary">
         <Header color="secondary" />
-        <div className="mt-12 mb-36 lg:mt-28 lg:mb-44 text-f-secondary">
-          <h1 className="mb-1.5 lg:mb-0.5 aqua-big-banner text-[42.5px] leading-[50px] lg:text-[120px] lg:leading-[135px] uppercase max-w-5xl">
+        <div className="mt-12 mb-56 lg:mt-28 lg:mb-44 text-f-secondary">
+          <h1 className="mb-1.5 lg:mb-0.5 aqua-big-banner text-[38px] leading-[50px] lg:text-[120px] lg:leading-[135px] uppercase max-w-5xl">
             Ne soyez plus dans le flou
           </h1>
-          <h2 className="mb-14 aqua-title text-[14px] lg:text-[25px]">
+          <h2 className="mb-10 lg:mb-14 aqua-title text-[13px] lg:text-[25px]">
             La beauté est essentielle, la pertinence la valorise.
           </h2>
-          <div className="flex flex-wrap gap-3 max-w-72 lg:max-w-none lg:gap-5">
+          <div className="flex flex-wrap gap-3 max-w-80 lg:max-w-none lg:gap-5">
             {TAGS.map((tag, index) => (
-              <Button key={index} customClass="w-fit">
+              <Button key={index} className="w-fit">
                 {tag}
               </Button>
             ))}
           </div>
         </div>
-        <p className="hidden lg:block aqua-caption text-f-secondary text-[14px] uppercase">
-          SCROLL
+        <p
+          className="hidden lg:block aqua-caption text-f-secondary text-[14px] lg:text-[18px] uppercase transition-all duration-500 ease-in-out"
+          style={{ opacity: scrollTextOpacity }}
+        >
+          (SCROLL) pour voir ce que je fais.. 👀
         </p>
-      </div>
-      <div className="pt-11 pb-[26px] lg:pt-12 lg:pb-36 text-f-primary">
+      </section>
+      <section
+        className="pt-11 pb-[66px] lg:pt-12 lg:pb-36 text-f-primary"
+        data-textcolor="#fff8f3"
+      >
         <div className="mb-5 md:mb-0 px-[22px] md:px-16 lg:px-20 flex justify-between items-center">
-          <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
+          <h1 className="aqua-banner text-[28px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             Ce que je fais..
           </h1>
-          <Link href="/projets">
-            <Button variant="secondary" customClass="w-fit">
+          <Link href="/projet" className="hidden lg:block">
+            <Button variant="secondary" className="w-fit">
               Voir tous les projets
             </Button>
           </Link>
@@ -224,13 +252,16 @@ export default function Home() {
           defaultIndex={0}
           tabsConfig={tabsConfig}
         />
-      </div>
-      <div className="px-[22px] pt-11 md:px-16 lg:px-20 lg:pt-12 bg-primary text-f-secondary h-fit relative">
-        <div className="mb-5 lg:mb-12 flex justify-between items-center">
-          <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
+        <Link href="/projet" className="px-[22px] mt-4 block lg:hidden">
+          <Button className="text-[16px] py-4">Voir tous les projets 👀</Button>
+        </Link>
+      </section>
+      <section className="px-[22px] pt-11 md:px-16 lg:px-20 lg:pt-12 bg-primary text-f-secondary h-fit relative">
+        <div className="mb-5 lg:mb-12 flex justify-between items-end lg:items-center">
+          <h1 className="aqua-banner text-[28px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             CE QUE JE PROPOSE..
           </h1>
-          <div className="text-right">
+          <div className="hidden lg:block text-right">
             <p className="aqua-big-caption text-[10px] lg:text-[25px]">
               300 euros / jour
             </p>
@@ -238,6 +269,20 @@ export default function Home() {
               Du lundi au vendredi
             </p>
           </div>
+          <Tooltip
+            placement="bottom-end"
+            className="lg:hidden"
+            contentText={
+              <div className="w-28 text-center">
+                <p className="aqua-big-caption text-[12px] lg:text-[25px]">
+                  300 euros / jour
+                </p>
+                <p className="aqua-caption text-[10px] lg:text-[20px]">
+                  Du lundi au vendredi
+                </p>
+              </div>
+            }
+          />
         </div>
         <Accordion
           title="Direction artistique"
@@ -247,7 +292,7 @@ export default function Home() {
                 Vous aider à avoir une identité visuelle impactante à la hauteur
                 de votre offre !
               </p>
-              <div className="ml-auto flex flex-col gap-3 lg:gap-6 w-full max-w-48 lg:max-w-96">
+              <div className="ml-auto flex flex-col gap-3 lg:gap-6 w-full max-w-48 lg:max-w-96 pb-0.5">
                 {SKILLS_DA.map((skill, index) => (
                   <Accordion
                     key={index}
@@ -258,7 +303,7 @@ export default function Home() {
                         <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
                           {`0${index + 1}.`}
                         </div>
-                        <div className="aqua-big-caption text-[12px] lg:text-[25px]">
+                        <div className="relative aqua-big-caption text-[12px] lg:text-[25px] after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-0.5 after:transition-all duration-500 after:pointer-events-none hover:after:w-full focus:after:w-0">
                           {skill.name}
                         </div>
                       </>
@@ -291,7 +336,7 @@ export default function Home() {
                 Vous accompagner sur la conception d’un site e-commerce sexy et
                 attractif.
               </p>
-              <div className="ml-auto flex flex-col gap-3 lg:gap-6 w-full max-w-48 lg:max-w-96">
+              <div className="ml-auto flex flex-col gap-3 lg:gap-6 w-full max-w-48 lg:max-w-96 pb-0.5">
                 {SKILLS_UXUI.map((skill, index) => (
                   <Accordion
                     key={index}
@@ -301,7 +346,7 @@ export default function Home() {
                         <div className="font-Gotham text-[10px] lg:text-[15px] text-right w-8">
                           {`0${index + 1}.`}
                         </div>
-                        <div className="aqua-big-caption text-[12px] lg:text-[25px]">
+                        <div className="relative aqua-big-caption text-[12px] lg:text-[25px] after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-0.5 after:transition-all duration-500 after:pointer-events-none hover:after:w-full">
                           {skill.name}
                         </div>
                       </>
@@ -326,10 +371,10 @@ export default function Home() {
           size="large"
           allowClose={false}
         />
-      </div>
-      <div className="pt-11 lg:pt-14 lg:pb-[70px] text-f-primary">
+      </section>
+      <section className="pt-11 lg:pt-14 lg:pb-[70px] text-f-primary">
         <div className="px-[22px] md:px-16 lg:px-20 lg:mb-11">
-          <h1 className="mb-6 lg:mb-[22px] aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase antialiased">
+          <h1 className="mb-6 lg:mb-[22px] aqua-banner text-[28px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase antialiased">
             ILS ONT AIMÉS !
           </h1>
           <div className="lg:mb-20">
@@ -391,7 +436,7 @@ export default function Home() {
             </span>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

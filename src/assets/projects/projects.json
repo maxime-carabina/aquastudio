@@ -1,6 +1,7 @@
 [
   {
     "id": "max",
+    "category": "direction-artistique",
     "content": {
       "name": "Max",
       "tags": ["DA", "Personnal Branding"],
@@ -215,6 +216,7 @@
   },
   {
     "id": "tamara-agency",
+    "category": "direction-artistique",
     "content": {
       "name": "Tamara Agency",
       "tags": ["DA", "Refont", "Social média"],
@@ -368,6 +370,7 @@
   },
   {
     "id": "galbo",
+    "category": "direction-artistique",
     "content": {
       "name": "Galbo",
       "tags": ["DA", "Packaging", "PLV"],
@@ -603,6 +606,7 @@
   },
   {
     "id": "latypique",
+    "category": "ux-ui-design",
     "content": {
       "name": "L.atypique",
       "tags": ["UX/UI", "Maquettes figma", "Choix de thème"],
@@ -778,6 +782,7 @@
   },
   {
     "id": "brigitte",
+    "category": "ux-ui-design",
     "content": {
       "name": "Brigitte",
       "tags": ["DA", "Packaging", "PLV"],

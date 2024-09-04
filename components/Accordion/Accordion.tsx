@@ -35,7 +35,8 @@ function ListAccordion(props: AccordionProps) {
     <div className={cn(className)}>
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className="flex items-center gap-6 lg:gap-12 hover:text-f-secondary/75 transition-all duration-300 w-full antialiased"
+        // className="relative flex items-center gap-6 lg:gap-12 hover:text-f-secondary/75 transition-all duration-300 w-full antialiased"
+        className="flex items-center gap-6 lg:gap-12 w-full antialiased"
       >
         {title}
       </button>

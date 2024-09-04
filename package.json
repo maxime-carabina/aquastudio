@@ -15,8 +15,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
     "@studio-freight/lenis": "^1.0.39",
     "@studio-freight/tempus": "^0.0.44",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "embla-carousel-react": "8.0.0-rc21",
     "gsap": "^3.12.5",

@@ -78,6 +78,7 @@ export type RightColContentModel = {
 
 export type ProjectModel = {
   id: string;
+  category: string;
   content: {
     name: string;
     tags: string[];

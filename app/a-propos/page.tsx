@@ -18,6 +18,53 @@ import Logo from '@/src/assets/test.png';
 
 const TAGS = ['Photoshop', 'Illustrator', 'Figma', 'After Effect'];
 
+// const PROJECTS = [
+//   {
+//     width: 621,
+//     height: 481,
+//     img: {
+//       url: '/images/lpp-baumes.jpg',
+//       alt: 'lpp-baumes',
+//       objectFit: 'object-none',
+//       objectPosition: 'object-[center_85%]',
+//     },
+//     contentButton: 'Beauté ✨',
+//   },
+//   {
+//     width: 621,
+//     height: 481,
+//     img: {
+//       url: '/images/lpp-baumes.jpg',
+//       alt: 'lpp-baumes',
+//       objectFit: 'object-none',
+//       objectPosition: 'object-[center_85%]',
+//     },
+//     contentButton: 'Beauté ✨',
+//   },
+//   {
+//     width: 621,
+//     height: 481,
+//     img: {
+//       url: '/images/lpp-baumes.jpg',
+//       alt: 'lpp-baumes',
+//       objectFit: 'object-none',
+//       objectPosition: 'object-[center_85%]',
+//     },
+//     contentButton: 'Beauté ✨',
+//   },
+//   {
+//     width: 621,
+//     height: 481,
+//     img: {
+//       url: '/images/lpp-baumes.jpg',
+//       alt: 'lpp-baumes',
+//       objectFit: 'object-none',
+//       objectPosition: 'object-[center_85%]',
+//     },
+//     contentButton: 'Beauté ✨',
+//   },
+// ];
+
 const PROJECTS = [
   {
     width: 621,
@@ -31,37 +78,40 @@ const PROJECTS = [
     contentButton: 'Beauté ✨',
   },
   {
-    width: 621,
+    width: 470,
     height: 481,
+    mobileHeight: 285,
     img: {
-      url: '/images/lpp-baumes.jpg',
-      alt: 'lpp-baumes',
-      objectFit: 'object-none',
-      objectPosition: 'object-[center_85%]',
+      url: '/images/projects/BRIGITTE/Brigitte_carte_mockups.png',
+      alt: 'Brigitte_carte_mockups',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
     },
-    contentButton: 'Beauté ✨',
+    contentButton: 'Food 🍔',
+  },
+  {
+    width: 481,
+    height: 481,
+    mobileHeight: 219,
+    img: {
+      url: '/images/projects/TAMARA_AGENCY/mockup-ohone-TA.jpg',
+      alt: 'mockup-ohone-TA',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
+    },
+    contentButton: 'Web 📱',
   },
   {
     width: 621,
     height: 481,
+    mobileHeight: 335,
     img: {
-      url: '/images/lpp-baumes.jpg',
-      alt: 'lpp-baumes',
-      objectFit: 'object-none',
-      objectPosition: 'object-[center_85%]',
+      url: '/images/projects/GALBO/étiquette-2-galbo.png',
+      alt: 'étiquette-2-galbo',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
     },
-    contentButton: 'Beauté ✨',
-  },
-  {
-    width: 621,
-    height: 481,
-    img: {
-      url: '/images/lpp-baumes.jpg',
-      alt: 'lpp-baumes',
-      objectFit: 'object-none',
-      objectPosition: 'object-[center_85%]',
-    },
-    contentButton: 'Beauté ✨',
+    contentButton: 'Mode 🛍️',
   },
 ];
 
@@ -159,7 +209,7 @@ export default function AboutPage() {
             />
           </div>
           <div className="grow">
-            <h2 className="font-GothamLight text-[10px] lg:leading-[19.12px] lg:text-[18px] antialiased mb-2">
+            <h2 className="font-GothamLight font-medium text-[12px] lg:leading-[19.12px] lg:text-[18px] antialiased mb-2">
               Directrice artistique - UXUI designer
             </h2>
             <h1 className="uppercase aqua-banner text-[20px] lg:text-[50px] leading-none antialiased mb-5 lg:mb-12">
@@ -167,12 +217,12 @@ export default function AboutPage() {
             </h1>
             <div className="mb-[31px] md:mb-12 flex flex-wrap gap-3 lg:max-w-none lg:gap-5">
               {TAGS.map((tag, index) => (
-                <Button key={index} customClass="w-fit">
+                <Button key={index} className="w-fit">
                   {tag}
                 </Button>
               ))}
             </div>
-            <p className="mb-[30px] aqua-caption text-[10px] lg:text-[16px] lg-leading-[22px] max-w-[640px] antialiased">
+            <p className="mb-[30px] aqua-caption text-[12px] lg:text-[16px] lg-leading-[22px] max-w-[640px] antialiased">
               La création a toujours été une composante essentielle de mon
               existence.
               <br />
@@ -186,7 +236,7 @@ export default function AboutPage() {
             <div className="mb-[30px] lg:mb-[60px]">
               <Button
                 variant="tertiary"
-                customClass="rounded-[5px] lg:rounded-[20px] h-7 lg:h-[71px]"
+                className="rounded-[5px] lg:rounded-[20px] lg:text-[25px] py-4 lg:py-[22px]" //h-7 lg:h-[71px]
               >
                 Je veux te contacter ! ✨
               </Button>
@@ -196,31 +246,31 @@ export default function AboutPage() {
               content={
                 <ul className="list-disc pl-5 lg:pl-4">
                   <li className="mb-[37px] lg:mb-11">
-                    <span className="antialiased font-GothamBook text-[12px] lg:text-[20px]">
+                    <span className="antialiased font-Gotham font-normal text-[12px] lg:text-[20px]">
                       TAMARA AGENCY - Experts Shopify
                     </span>
-                    <div className="mt-2 lg:mt-[23px] relative antialiased before:content-[''] before:h-[63px] before:md:h-[93px] before:w-[1px] before:bg-secondary before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2">
-                      <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px] pl-3">
+                    <div className="mt-2 lg:mt-[23px] relative antialiased before:content-[''] before:h-[83px] before:md:h-[93px] before:w-[1px] before:bg-secondary before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2">
+                      <div className="mb-[11px] font-GothamBook antialiased text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px] pl-3">
                         Alternance et freelance/2023
                       </div>
-                      <div className="mb-8 lg:mb-12 font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px] pl-3">
+                      <div className="mb-8 lg:mb-12 font-GothamLight text-[12px] leading-[13px] lg:leading-[17px] lg:text-[16px] pl-3">
                         Refonte DA de l’agence - identité visuelle des clients -
                         social média
                       </div>
-                      <div className="font-GothamLight text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px] pl-3">
+                      <div className="font-GothamLight text-[12px] leading-[14px] lg:leading-[17px] lg:text-[16px] pl-3">
                         Stage/2021
                       </div>
                     </div>
                   </li>
                   <li>
-                    <span className="antialiased font-GothamBook text-[12px] lg:text-[20px]">
+                    <span className="antialiased font-Gotham font-normal text-[12px] lg:text-[20px]">
                       LES PETITS PRÖDIGES
                     </span>
                     <div className="pt-2 lg:pt-[23px] pb-10 antialiased">
                       <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
                         Stage 6 mois/2022
                       </div>
-                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px]">
+                      <div className="font-GothamLight text-[12px] leading-[14px] lg:leading-[17px] lg:text-[16px]">
                         Création de packagings - vitrines (Monop’ beauty) -
                         illustrations - PLV - assistance aux shootings - social
                         média
@@ -235,14 +285,14 @@ export default function AboutPage() {
               content={
                 <ul className="list-disc pl-4">
                   <li className="mb-[37px] lg:mb-11">
-                    <span className="antialiased font-GothamBook text-[12px] lg:text-[20px]">
+                    <span className="antialiased font-Gotham font-normal text-[12px] lg:text-[20px]">
                       ISCOM PARIS - Master manager de la marque
                     </span>
                     <div className="pt-2 lg:pt-[23px] antialiased">
-                      <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
+                      <div className="mb-[11px] font-GothamBook font-medium text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
                         Spécialité CREA360/2020-2023
                       </div>
-                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px] lg:max-w-[620px]">
+                      <div className="font-GothamLight text-[12px] leading-[14px] lg:leading-[17px] lg:text-[16px] lg:max-w-[620px]">
                         Print/édition/packagings - Direction artistique -
                         Stratégie de marque Conception rédaction - Cultural
                         studies - Motion design - Activation digitale.
@@ -250,14 +300,14 @@ export default function AboutPage() {
                     </div>
                   </li>
                   <li>
-                    <span className="antialiased font-GothamBook text-[12px] lg:text-[20px]">
+                    <span className="antialiased font-Gotham font-normal text-[12px] lg:text-[20px]">
                       BTS MUC - Notre Dame Les Oiseaux
                     </span>
                     <div className="pt-2 lg:pt-[23px] lg:pb-10 antialiased">
-                      <div className="mb-[11px] font-GothamBook text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
+                      <div className="mb-[11px] font-GothamBook font-medium text-[10px] leading-[10.71px] lg:leading-[17px] lg:text-[16px]">
                         2 ans/2018-2020
                       </div>
-                      <div className="font-GothamLight text-[10px] leading-[13px] lg:leading-[17px] lg:text-[16px] lg:max-w-[620px]">
+                      <div className="font-GothamLight text-[12px] leading-[14px] lg:leading-[17px] lg:text-[16px] lg:max-w-[620px]">
                         Marketing général - Management - Merchandising - Droit -
                         Économie - Gestion.
                       </div>
@@ -269,13 +319,13 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="pt-11 pb-[26px] lg:pt-12 lg:pb-36 text-f-primary">
+      <div className="pt-8 pb-11 lg:pt-12 lg:pb-36 text-f-primary">
         <div className="mb-5 md:mb-0 px-[22px] md:px-16 lg:px-20 flex justify-between items-center">
-          <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase antialiased">
+          <h1 className="aqua-banner text-[28px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase antialiased">
             Ce que je fais..
           </h1>
-          <Link href="/projets">
-            <Button variant="secondary" customClass="w-fit">
+          <Link href="/projets" className="hidden lg:block">
+            <Button variant="secondary" className="w-fit">
               Voir tous les projets
             </Button>
           </Link>
@@ -285,9 +335,12 @@ export default function AboutPage() {
           defaultIndex={0}
           tabsConfig={tabsConfig}
         />
+        <Link href="/projet" className="px-[22px] mt-4 block lg:hidden">
+          <Button className="text-[16px] py-4">Voir tous les projets 👀</Button>
+        </Link>
       </div>
       <div className="px-[22px] py-11 md:px-16 lg:px-20 lg:py-20 bg-primary text-f-secondary">
-        <h1 className="mb-6 lg:mb-14 aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase antialiased">
+        <h1 className="mb-6 lg:mb-14 aqua-banner text-[28px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase antialiased">
           Pourquoi moi ?
         </h1>
         <div className="hidden lg:flex items-center justify-between">
@@ -352,14 +405,14 @@ export default function AboutPage() {
                 </div>
               </CarouselItem>
             </CarouselContent>
-            <CarouselPrevious customClass="bg-secondary text-f-primary w-10 h-10" />
-            <CarouselNext customClass="bg-secondary text-f-primary w-10 h-10" />
+            <CarouselPrevious variant="tertiary" className="w-12 h-12" />
+            <CarouselNext variant="tertiary" className="w-12 h-12" />
           </Carousel>
         </div>
       </div>
       <div className="pt-11 lg:pt-14 lg:pb-[70px] text-f-primary">
         <div className="px-[22px] md:px-16 lg:px-20 lg:mb-11">
-          <h1 className="mb-6 lg:mb-[22px] aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase antialiased">
+          <h1 className="mb-6 lg:mb-[22px] aqua-banner text-[28px] leading-[20px] lg:text-[80px] lg:leading-[80px] uppercase antialiased">
             ILS ONT AIMÉS !
           </h1>
           <div>

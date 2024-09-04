@@ -148,7 +148,7 @@ export default function ProjectsPage() {
             </h1>
             <div className="flex flex-wrap gap-3 max-w-72 lg:max-w-none lg:gap-5">
               {TAGS.map((tag, index) => (
-                <Button key={index} customClass="w-fit" variant="secondary">
+                <Button key={index} className="w-fit" variant="secondary">
                   {tag}
                 </Button>
               ))}
@@ -365,7 +365,7 @@ export default function ProjectsPage() {
               N’hésites pas à me contacter pour discuter de ton projet !!
             </h2>
             <div className="max-w-96">
-              <Button variant="secondary" customClass="antialiased">
+              <Button variant="secondary" className="antialiased">
                 Je suis intéressé(e) par ton travail !
               </Button>
             </div>
