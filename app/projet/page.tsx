@@ -50,8 +50,8 @@ export default function ProjectPage() {
               img={{
                 url: '/images/lpp-baumes.jpg',
                 alt: 'baumes',
-                objectFit: 'object-cover',
-                objectPosition: 'object-center',
+                objectFit: 'object-none',
+                objectPosition: 'object-[center_85%]',
               }}
               contentButton="Cosmétiques ✨"
             />
