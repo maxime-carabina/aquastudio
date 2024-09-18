@@ -215,7 +215,7 @@ export default function Home() {
           <h1 className="mb-1.5 lg:mb-0.5 aqua-big-banner text-[38px] leading-[50px] lg:text-[120px] lg:leading-[135px] uppercase max-w-5xl">
             Ne soyez plus dans le flou
           </h1>
-          <h2 className="mb-10 lg:mb-14 aqua-title text-[13px] lg:text-[25px]">
+          <h2 className="mb-10 lg:mb-14 aqua-title font-GothamLight text-[13px] lg:text-[25px]">
             La beauté est essentielle, la pertinence la valorise.
           </h2>
           <div className="flex flex-wrap gap-3 max-w-80 lg:max-w-none lg:gap-5">

@@ -38,13 +38,14 @@ export function NavBar(props: NavBarProps) {
   const pathname = usePathname();
 
   useEffect(() => {
-    setActiveLink(
-      LINKS.find((link) => link.href === pathname)?.id ||
-        LINKS[defaultIndex].id,
-    );
+    LINKS.forEach((link) => {
+      if (pathname.includes(link.href)) {
+        setActiveLink(link.id);
+      }
+    });
   }, [pathname]);
 
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState(LINKS[defaultIndex].id);
   const [hoveredLink, setHoveredLink] = useState<null | string>(null);
 
   const handleClick = (link: string) => {

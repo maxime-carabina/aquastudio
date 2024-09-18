@@ -301,7 +301,7 @@
 }
 
 @font-face {
-  font-family: 'Gotham';
+  font-family: 'Gotham-Book';
   src: url('../public/fonts/Gotham-Font/Gotham-Book.ttf');
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
@@ -380,4 +380,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-display: swap;
+}
+
+/* Tilt Warp */
+@font-face {
+  font-family: 'Tilt Warp';
+  src: url('../public/fonts/Tilt_Warp/TiltWarp-Regular-VariableFont_XROT\,YROT.ttf');
+  font-weight: normal;
+  display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

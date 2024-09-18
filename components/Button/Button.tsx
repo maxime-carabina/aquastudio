@@ -11,9 +11,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-primary text-f-secondary border-secondary hover:text-f-primary hover:shadow-[inset_25rem_0_0_0] lg:hover:shadow-secondary duration-500 transition-[color,box-shadow]',
+          'bg-primary text-f-secondary border-secondary md:hover:text-f-primary md:hover:shadow-[inset_25rem_0_0_0] lg:hover:shadow-secondary duration-500 transition-[color,box-shadow]',
         secondary:
-          'bg-secondary text-f-primary border-primary z-0 hover:text-f-secondary hover:shadow-[inset_25rem_0_0_0] lg:hover:shadow-primary duration-500 transition-[color, box-shadow]',
+          'bg-secondary text-f-primary border-primary z-0 md:hover:text-f-secondary md:hover:shadow-[inset_25rem_0_0_0] lg:hover:shadow-primary duration-500 transition-[color, box-shadow]',
         tertiary: 'bg-secondary text-f-primary border-tertiary',
         outline:
           'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',

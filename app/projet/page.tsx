@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Tabs, Button, ProjectCard } from '@/components';
 import Logo from '@/src/assets/test.png';
@@ -33,64 +34,74 @@ export default function ProjectPage() {
             </div>
           </div>
           <div className="lg:col-span-2 lg:row-span-4 lg:col-start-4 relative">
-            <ProjectCard
-              className="w-full h-72 lg:h-full"
-              img={{
-                url: '/images/projects/BRIGITTE/affiche-2-mockup.jpg',
-                alt: 'Affiche Brigitte',
-                objectFit: 'object-cover',
-                objectPosition: 'object-center',
-              }}
-              contentButton="Food 🍔"
-            />
+            <Link href="/projet/brigitte">
+              <ProjectCard
+                className="w-full h-72 lg:h-full"
+                img={{
+                  url: '/images/projects/BRIGITTE/affiche-2-mockup.jpg',
+                  alt: 'Affiche Brigitte',
+                  objectFit: 'object-cover',
+                  objectPosition: 'object-center',
+                }}
+                contentButton="Food 🍔"
+              />
+            </Link>
           </div>
           <div className="lg:col-span-3 lg:row-span-3 lg:row-start-4 relative">
-            <ProjectCard
-              className="w-full h-60 lg:h-full"
-              img={{
-                url: '/images/lpp-baumes.jpg',
-                alt: 'baumes',
-                objectFit: 'object-none',
-                objectPosition: 'object-[center_85%]',
-              }}
-              contentButton="Cosmétiques ✨"
-            />
+            <Link href="/projet/les-petits-prodiges">
+              <ProjectCard
+                className="w-full h-60 lg:h-full"
+                img={{
+                  url: '/images/lpp-baumes.jpg',
+                  alt: 'baumes',
+                  objectFit: 'object-none',
+                  objectPosition: 'object-[center_85%]',
+                }}
+                contentButton="Cosmétiques ✨"
+              />
+            </Link>
           </div>
           <div className="lg:col-span-2 lg:row-span-3 lg:col-start-4 lg:row-start-5 relative">
-            <ProjectCard
-              className="w-full h-[272px] lg:h-full"
-              img={{
-                url: '/images/projects/MAX/carte-de-visite-mockup.png',
-                alt: 'carte de visite',
-                objectFit: 'object-cover',
-                objectPosition: 'object-center',
-              }}
-              contentButton="Web📱"
-            />
+            <Link href="/projet/max">
+              <ProjectCard
+                className="w-full h-[272px] lg:h-full"
+                img={{
+                  url: '/images/projects/MAX/carte-de-visite-mockup.png',
+                  alt: 'carte de visite',
+                  objectFit: 'object-cover',
+                  objectPosition: 'object-center',
+                }}
+                contentButton="Web📱"
+              />
+            </Link>
           </div>
           <div className="lg:col-span-3 lg:row-span-4 lg:row-start-7 relative">
-            <ProjectCard
-              className="w-full h-[335px] lg:h-full"
-              img={{
-                url: '/images/projects/GALBO/packaging-galbo.jpg',
-                alt: 'packaging galbo',
-                objectFit: 'object-cover',
-                objectPosition: 'object-center',
-              }}
-              contentButton="Mode 🛍️"
-            />
+            <Link href="/projet/galbo">
+              <ProjectCard
+                className="w-full h-[335px] lg:h-full"
+                img={{
+                  url: '/images/projects/GALBO/packaging-galbo.jpg',
+                  alt: 'packaging galbo',
+                  objectFit: 'object-cover',
+                  objectPosition: 'object-center',
+                }}
+                contentButton="Mode 🛍️"
+              />
+            </Link>
           </div>
           <div className="lg:col-span-2 lg:row-span-3 lg:col-start-4 lg:row-start-8 relative">
-            <ProjectCard
-              className="w-full h-56 lg:h-full"
-              img={{
-                url: '/images/projects/TAMARA_AGENCY/mockup-ohone-TA.jpg',
-                alt: 'mockup ophone TA',
-                objectFit: 'object-cover',
-                objectPosition: 'object-center',
-              }}
-              contentButton="Web📱"
-            />
+            <Link href="/projet/tamara-agency">
+              <ProjectCard
+                className="w-full h-56 lg:h-full"
+                img={{
+                  url: '/images/projects/TAMARA_AGENCY/mockup-ohone-TA.jpg',
+                  alt: 'mockup ophone TA',
+                  objectFit: 'object-cover',
+                  objectPosition: 'object-center',
+                }}
+                contentButton="Web📱"
+              />
+            </Link>
           </div>
           <div className="lg:col-span-5 lg:row-span-2 lg:row-start-11 p-4 lg:p-12 bg-primary rounded-[20px] text-f-secondary font-GothamLight">
             <h1 className="mb-2 lg:mb-6 font-Gotham font-normal text-[35px] lg:text-[50px] antialiased">
@@ -134,52 +145,60 @@ export default function ProjectPage() {
             </div>
           </div>
           <div className="lg:col-span-2 lg:row-span-4 lg:col-start-4 relative">
-            <ProjectCard
-              className="w-full h-[435px] lg:h-full"
-              img={{
-                url: '/images/projects/LES_4_SAISONS/mockup-iphone.webp',
-                alt: 'mockup iphone',
-                objectFit: 'object-cover',
-                objectPosition: 'object-center',
-              }}
-              contentButton="Food 🍔"
-            />
+            <Link href="/projet/les-4-saisons">
+              <ProjectCard
+                className="w-full h-[435px] lg:h-full"
+                img={{
+                  url: '/images/projects/LES_4_SAISONS/mockup-iphone.webp',
+                  alt: 'mockup iphone',
+                  objectFit: 'object-cover',
+                  objectPosition: 'object-center',
+                }}
+                contentButton="Food 🍔"
+              />
+            </Link>
           </div>
           <div className="lg:col-span-3 lg:row-span-4 lg:row-start-4 relative">
-            <ProjectCard
-              className="w-full h-80 lg:h-full"
-              img={{
-                url: '/images/projects/LATYPIQUE/mockup-2-latypique.jpg',
-                alt: 'mockup 2 latypique',
-                objectFit: 'object-cover',
-                objectPosition: 'object-center',
-              }}
-              contentButton="Cosmétiques ✨"
-            />
+            <Link href="/projet/latypique">
+              <ProjectCard
+                className="w-full h-80 lg:h-full"
+                img={{
+                  url: '/images/projects/LATYPIQUE/mockup-2-latypique.jpg',
+                  alt: 'mockup 2 latypique',
+                  objectFit: 'object-cover',
+                  objectPosition: 'object-center',
+                }}
+                contentButton="Cosmétiques ✨"
+              />
+            </Link>
           </div>
           <div className="lg:col-span-2 lg:row-span-3 lg:col-start-4 lg:row-start-5 relative">
-            <ProjectCard
-              className="w-full h-80 lg:h-full"
-              img={{
-                url: '/images/projects/GALBO/Galbo_bannière_mockup.webp',
-                alt: 'Galbo bannière mockup',
-                objectFit: 'object-cover',
-                objectPosition: 'object-center',
-              }}
-              contentButton="Mode 🛍️"
-            />
+            <Link href="/projet/galbo">
+              <ProjectCard
+                className="w-full h-80 lg:h-full"
+                img={{
+                  url: '/images/projects/GALBO/Galbo_bannière_mockup.webp',
+                  alt: 'Galbo bannière mockup',
+                  objectFit: 'object-cover',
+                  objectPosition: 'object-center',
+                }}
+                contentButton="Mode 🛍️"
+              />
+            </Link>
           </div>
           <div className="lg:col-span-3 lg:row-span-3 lg:row-start-8 relative">
-            <ProjectCard
-              className="w-full h-64 lg:h-full"
-              img={{
-                url: '/images/projects/BRIGITTE/mockup-appli-brigitte.jpg',
-                alt: 'mockup appli brigitte',
-                objectFit: 'object-cover',
-                objectPosition: 'object-center',
-              }}
-              contentButton="Food 🍔"
-            />
+            <Link href="/projet/brigitte">
+              <ProjectCard
+                className="w-full h-64 lg:h-full"
+                img={{
+                  url: '/images/projects/BRIGITTE/mockup-appli-brigitte.jpg',
+                  alt: 'mockup appli brigitte',
+                  objectFit: 'object-cover',
+                  objectPosition: 'object-center',
+                }}
+                contentButton="Food 🍔"
+              />
+            </Link>
           </div>
           <div className="lg:col-span-2 lg:row-span-3 lg:col-start-4 lg:row-start-8 p-4 lg:px-8 lg:py-12 bg-primary rounded-[20px] text-f-secondary font-GothamLight antialiased">
             <h1 className="mb-2 lg:mb-6 font-Gotham font-normal text-[35px] lg:text-[50px] antialiased">
