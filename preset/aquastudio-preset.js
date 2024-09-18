@@ -20,6 +20,7 @@ module.exports = {
         Poppins: ['Poppins', 'sans-serif'],
         Allotrope: ['Allotrope', 'sans-serif'],
         Montserrat: ['Montserrat', 'sans-serif'],
+        TiltWarp: ['Tilt Warp'],
       },
       colors: {
         background: 'rgb(var(--background) / <alpha-value>)',
