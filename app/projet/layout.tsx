@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import Link from 'next/link';
+
 import {
   Carousel,
   CarouselContent,
@@ -11,50 +13,111 @@ import {
   Tabs,
 } from '@/components';
 
-const PROJECTS = [
+const PROJECTS_DA = [
   {
     width: 621,
-    height: 453,
+    height: 481,
     img: {
-      url: '/images/lpp-baumes.jpg',
+      url: '/images/projects/LES_PETITS_PRODIGES/baumes.webp',
       alt: 'lpp-baumes',
-      objectFit: 'object-none',
-      objectPosition: 'object-[center_85%]',
-    },
-    contentButton: 'Beauté ✨',
-  },
-  {
-    width: 757,
-    height: 453,
-    img: {
-      url: '/images/projects/MAX/stickers-mockup-2.png',
-      alt: 'stickers-mockup-2',
       objectFit: 'object-cover',
-      objectPosition: 'object-[center_60%]',
+      objectPosition: 'object-center',
     },
     contentButton: 'Beauté ✨',
+    linkToPage: 'les-petits-prodiges',
+  },
+  {
+    width: 470,
+    height: 481,
+    mobileHeight: 285,
+    img: {
+      url: '/images/projects/BRIGITTE/Brigitte_carte_mockups.png',
+      alt: 'Brigitte_carte_mockups',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
+    },
+    contentButton: 'Food 🍔',
+    linkToPage: 'brigitte',
+  },
+  {
+    width: 481,
+    height: 481,
+    mobileHeight: 219,
+    img: {
+      url: '/images/projects/TAMARA_AGENCY/mockup-ohone-TA.jpg',
+      alt: 'mockup-ohone-TA',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
+    },
+    contentButton: 'Web 📱',
+    linkToPage: 'tamara-agency',
   },
   {
     width: 621,
-    height: 453,
+    height: 481,
+    mobileHeight: 335,
     img: {
-      url: '/images/lpp-baumes.jpg',
-      alt: 'lpp-baumes',
-      objectFit: 'object-none',
-      objectPosition: 'object-[center_85%]',
+      url: '/images/projects/GALBO/étiquette-2-galbo.png',
+      alt: 'étiquette-2-galbo',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
     },
-    contentButton: 'Beauté ✨',
+    contentButton: 'Mode 🛍️',
+    linkToPage: 'galbo',
+  },
+];
+
+const PROJECTS_UX_UI = [
+  {
+    width: 621,
+    height: 481,
+    img: {
+      url: '/images/projects/LES_4_SAISONS/logo-vert.jpg',
+      alt: 'logo-vert',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
+    },
+    contentButton: 'Food 🍔',
+    linkToPage: 'les-4-saisons',
+  },
+  {
+    width: 470,
+    height: 481,
+    mobileHeight: 285,
+    img: {
+      url: '/images/projects/LATYPIQUE/mockup-2-latypique.jpg',
+      alt: 'mockup-2-latypique',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
+    },
+    contentButton: 'Cosmétiques ✨',
+    linkToPage: 'latypique',
   },
   {
     width: 621,
-    height: 453,
+    height: 481,
+    mobileHeight: 335,
     img: {
-      url: '/images/lpp-baumes.jpg',
-      alt: 'lpp-baumes',
-      objectFit: 'object-none',
-      objectPosition: 'object-[center_85%]',
+      url: '/images/projects/GALBO/Galbo_bannière_mockup.webp',
+      alt: 'Galbo_bannière_mockup',
+      objectFit: 'object-cover',
+      objectPosition: 'object-[center_90%]',
     },
-    contentButton: 'Beauté ✨',
+    contentButton: 'Mode 🛍️',
+    linkToPage: 'galbo',
+  },
+  {
+    width: 481,
+    height: 481,
+    mobileHeight: 300,
+    img: {
+      url: '/images/projects/BRIGITTE/mockup-appli-brigitte.jpg',
+      alt: 'mockup-appli-brigitte',
+      objectFit: 'object-cover',
+      objectPosition: 'object-center',
+    },
+    contentButton: 'Web 📱',
+    linkToPage: 'brigitte',
   },
 ];
 
@@ -66,17 +129,19 @@ export default function ProjectLayout({ children }: { children: ReactNode }) {
         <div className="mt-5 lg:mt-16 text-f-primary">
           <Carousel className="hidden lg:block lg:w-full">
             <CarouselContent className="w-full">
-              {PROJECTS.map((project, index) => (
+              {PROJECTS_DA.map((project, index) => (
                 <CarouselItem
                   key={index}
-                  className={index === 0 ? 'pl-[109px]' : ''}
+                  className={index === 0 ? 'pl-24' : ''}
                 >
-                  <ProjectCard
-                    width={project.width}
-                    height={project.height}
-                    img={project.img}
-                    contentButton={project.contentButton}
-                  />
+                  <Link href={`/projet/${project.linkToPage}`}>
+                    <ProjectCard
+                      width={project.width}
+                      height={project.height}
+                      img={project.img}
+                      contentButton={project.contentButton}
+                    />
+                  </Link>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -84,14 +149,16 @@ export default function ProjectLayout({ children }: { children: ReactNode }) {
             <CarouselNext />
           </Carousel>
           <div className="lg:hidden flex flex-col gap-4 px-[22px] md:px-16">
-            {PROJECTS.map((project, index) => (
-              <ProjectCard
-                key={index}
-                width={'100%'}
-                height={236}
-                img={project.img}
-                contentButton={project.contentButton}
-              />
+            {PROJECTS_DA.map((project, index) => (
+              <Link href={`/projet/${project.linkToPage}`}>
+                <ProjectCard
+                  key={index}
+                  width={'auto'}
+                  height={project.mobileHeight || 236}
+                  img={project.img}
+                  contentButton={project.contentButton}
+                />
+              </Link>
             ))}
           </div>
         </div>
@@ -103,17 +170,19 @@ export default function ProjectLayout({ children }: { children: ReactNode }) {
         <div className="mt-5 lg:mt-16 text-f-primary">
           <Carousel className="hidden lg:block lg:w-full">
             <CarouselContent className="w-full">
-              {PROJECTS.map((project, index) => (
+              {PROJECTS_UX_UI.map((project, index) => (
                 <CarouselItem
                   key={index}
-                  className={index === 0 ? 'pl-[109px]' : ''}
+                  className={index === 0 ? 'pl-24' : ''}
                 >
-                  <ProjectCard
-                    width={project.width}
-                    height={project.height}
-                    img={project.img}
-                    contentButton={project.contentButton}
-                  />
+                  <Link href={`/projet/${project.linkToPage}`}>
+                    <ProjectCard
+                      width={project.width}
+                      height={project.height}
+                      img={project.img}
+                      contentButton={project.contentButton}
+                    />
+                  </Link>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -121,14 +190,16 @@ export default function ProjectLayout({ children }: { children: ReactNode }) {
             <CarouselNext />
           </Carousel>
           <div className="lg:hidden flex flex-col gap-4 px-[22px] md:px-16">
-            {PROJECTS.map((project, index) => (
-              <ProjectCard
-                key={index}
-                width={'100%'}
-                height={236}
-                img={project.img}
-                contentButton={project.contentButton}
-              />
+            {PROJECTS_UX_UI.map((project, index) => (
+              <Link href={`/projet/${project.linkToPage}`}>
+                <ProjectCard
+                  key={index}
+                  width={'100%'}
+                  height={project.mobileHeight || 236}
+                  img={project.img}
+                  contentButton={project.contentButton}
+                />
+              </Link>
             ))}
           </div>
         </div>
@@ -142,7 +213,7 @@ export default function ProjectLayout({ children }: { children: ReactNode }) {
         <Header />
       </div>
       {children}
-      <div className="hidden lg:block pt-11 pb-[26px] lg:pt-12 lg:pb-[70px] text-f-primary">
+      <div className="pt-11 pb-[26px] lg:pt-12 lg:pb-[70px] text-f-primary">
         <div className="mb-5 md:mb-0 px-[22px] md:px-16 lg:px-[109px]">
           <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             En voir plus !

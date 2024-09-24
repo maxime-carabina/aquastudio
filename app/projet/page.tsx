@@ -111,9 +111,11 @@ export default function ProjectPage() {
               Mon travail te plait ? ✨<br />
               N’hésites pas à me contacter !!
             </p>
-            <Button className="w-fit hidden lg:block">
-              Je suis intéressé(e) par ton travail ! 👉
-            </Button>
+            <Link href="/contact">
+              <Button className="w-fit hidden lg:block">
+                Je suis intéressé(e) par ton travail ! 👉
+              </Button>
+            </Link>
           </div>
         </div>
       ),
@@ -208,9 +210,11 @@ export default function ProjectPage() {
               Mon travail te plait ? ✨<br />
               N’hésites pas à me contacter !!
             </p>
-            <Button className="w-fit hidden lg:block">
-              Je suis intéressé(e) par ton travail ! 👉
-            </Button>
+            <Link href="/contact">
+              <Button className="w-fit hidden lg:block">
+                Je suis intéressé(e) par ton travail ! 👉
+              </Button>
+            </Link>
           </div>
         </div>
       ),

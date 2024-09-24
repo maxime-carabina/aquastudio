@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Button } from '@/components';
 
@@ -237,12 +238,14 @@ function RightColScrollable() {
         N’hésites pas à me contacter pour discuter de ton projet !!
       </h2>
       <div className="max-w-96">
-        <Button variant="secondary" className="antialiased hidden lg:block">
-          Je suis intéressé(e) par ton travail !
-        </Button>
-        <Button className="py-4 antialiased lg:hidden">
-          Je suis intéressé(e) par ton travail !
-        </Button>
+        <Link href="/contact">
+          <Button variant="secondary" className="antialiased hidden lg:block">
+            Je suis intéressé(e) par ton travail !
+          </Button>
+          <Button className="py-4 antialiased lg:hidden">
+            Je suis intéressé(e) par ton travail !
+          </Button>
+        </Link>
       </div>
     </div>
   );
