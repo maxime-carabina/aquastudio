@@ -203,6 +203,7 @@ export default function AboutPage() {
               src="/images/Marine-Perraud.jpg"
               alt="Marine Perraud"
               quality={100}
+              loading="lazy"
               fill
               className="rounded-[20px] object-cover object-top"
               sizes="(max-width: 546px) 100vw, 546px"

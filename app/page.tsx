@@ -218,6 +218,7 @@ export default function Home() {
                 <Suspense
                   fallback={
                     <div
+                      key={index}
                       className={`rounded-2xl relative cursor-pointer block overflow-hidden bg-slate-700 animate-pulse`}
                       style={{
                         width: project.width,
