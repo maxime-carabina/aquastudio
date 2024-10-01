@@ -151,7 +151,7 @@ export default function ProjectPage() {
               <ProjectCard
                 className="w-full h-[435px] lg:h-full"
                 img={{
-                  url: '/images/projects/LES_4_SAISONS/mockup-iphone.webp',
+                  url: '/images/projects/LES_4_SAISONS/visuel-page-collection.jpg',
                   alt: 'mockup iphone',
                   objectFit: 'object-cover',
                   objectPosition: 'object-center',

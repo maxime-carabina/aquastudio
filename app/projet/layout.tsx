@@ -150,7 +150,7 @@ export default function ProjectLayout({ children }: { children: ReactNode }) {
           </Carousel>
           <div className="lg:hidden flex flex-col gap-4 px-[22px] md:px-16">
             {PROJECTS_DA.map((project, index) => (
-              <Link href={`/projet/${project.linkToPage}`}>
+              <Link key={index} href={`/projet/${project.linkToPage}`}>
                 <ProjectCard
                   key={index}
                   width={'auto'}
@@ -213,9 +213,9 @@ export default function ProjectLayout({ children }: { children: ReactNode }) {
         <Header />
       </div>
       {children}
-      <div className="pt-11 pb-[26px] lg:pt-12 lg:pb-[70px] text-f-primary">
+      <div className="pb-[26px] lg:pt-12 lg:pb-[70px] text-f-primary">
         <div className="mb-5 md:mb-0 px-[22px] md:px-16 lg:px-[109px]">
-          <h1 className="aqua-banner text-[20px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
+          <h1 className="aqua-banner text-[28px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase">
             En voir plus !
           </h1>
         </div>
