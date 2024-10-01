@@ -49,6 +49,7 @@ export function ProjectCard(props: ProjectCardProps) {
         fill
         className={`rounded-2xl ${img.objectFit} ${img.objectPosition} ${img.customClass}`}
         sizes="100% 100%"
+        loading="lazy"
       />
       <div
         className={`absolute rounded-2xl w-full h-full hidden lg:block hover:bg-black/10 transition-all duration-300 ease-in-out`}

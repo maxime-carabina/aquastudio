@@ -238,6 +238,7 @@ export default function ProjectPage() {
                   src={Logo}
                   alt="Aqua Studio Logo"
                   className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                  loading="lazy"
                 />
                 <p className="aqua-banner text-[30px] md:text-[70px]">
                   CONTACTEZ-MOI
@@ -250,6 +251,7 @@ export default function ProjectPage() {
                   src={Logo}
                   alt="Aqua Studio Logo"
                   className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                  loading="lazy"
                 />
                 <p className="aqua-banner text-[30px] md:text-[70px]">
                   CONTACTEZ-MOI
@@ -262,6 +264,7 @@ export default function ProjectPage() {
                   src={Logo}
                   alt="Aqua Studio Logo"
                   className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                  loading="lazy"
                 />
                 <p className="aqua-banner text-[30px] md:text-[70px]">
                   CONTACTEZ-MOI
@@ -274,6 +277,7 @@ export default function ProjectPage() {
                   src={Logo}
                   alt="Aqua Studio Logo"
                   className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                  loading="lazy"
                 />
                 <p className="aqua-banner text-[30px] md:text-[70px]">
                   CONTACTEZ-MOI
