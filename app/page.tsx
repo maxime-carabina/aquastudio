@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -187,12 +187,24 @@ export default function Home() {
                   className={index === 0 ? 'pl-24' : ''}
                 >
                   <Link href={`/projet/${project.linkToPage}`}>
-                    <ProjectCard
-                      width={project.width}
-                      height={project.height}
-                      img={project.img}
-                      contentButton={project.contentButton}
-                    />
+                    <Suspense
+                      fallback={
+                        <div
+                          className={`rounded-2xl relative cursor-pointer block overflow-hidden bg-slate-700 animate-pulse`}
+                          style={{
+                            width: project.width,
+                            height: project.height,
+                          }}
+                        />
+                      }
+                    >
+                      <ProjectCard
+                        width={project.width}
+                        height={project.height}
+                        img={project.img}
+                        contentButton={project.contentButton}
+                      />
+                    </Suspense>
                   </Link>
                 </CarouselItem>
               ))}
@@ -203,13 +215,25 @@ export default function Home() {
           <div className="lg:hidden flex flex-col gap-4 px-[22px] md:px-16">
             {PROJECTS_DA.map((project, index) => (
               <Link href={`/projet/${project.linkToPage}`}>
-                <ProjectCard
-                  key={index}
-                  width={'auto'}
-                  height={project.mobileHeight || 236}
-                  img={project.img}
-                  contentButton={project.contentButton}
-                />
+                <Suspense
+                  fallback={
+                    <div
+                      className={`rounded-2xl relative cursor-pointer block overflow-hidden bg-slate-700 animate-pulse`}
+                      style={{
+                        width: project.width,
+                        height: project.height,
+                      }}
+                    />
+                  }
+                >
+                  <ProjectCard
+                    key={index}
+                    width={'auto'}
+                    height={project.mobileHeight || 236}
+                    img={project.img}
+                    contentButton={project.contentButton}
+                  />
+                </Suspense>
               </Link>
             ))}
           </div>
@@ -458,6 +482,7 @@ export default function Home() {
                   src={Logo}
                   alt="Aqua Studio Logo"
                   className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                  loading="lazy"
                 />
                 <p className="aqua-banner text-[30px] md:text-[70px]">
                   CONTACTEZ-MOI
@@ -470,6 +495,7 @@ export default function Home() {
                   src={Logo}
                   alt="Aqua Studio Logo"
                   className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                  loading="lazy"
                 />
                 <p className="aqua-banner text-[30px] md:text-[70px]">
                   CONTACTEZ-MOI
@@ -482,6 +508,7 @@ export default function Home() {
                   src={Logo}
                   alt="Aqua Studio Logo"
                   className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                  loading="lazy"
                 />
                 <p className="aqua-banner text-[30px] md:text-[70px]">
                   CONTACTEZ-MOI
@@ -494,6 +521,7 @@ export default function Home() {
                   src={Logo}
                   alt="Aqua Studio Logo"
                   className="w-[89.33px] h-[89.33px] md:w-[147.89px] md:h-[147.89px]"
+                  loading="lazy"
                 />
                 <p className="aqua-banner text-[30px] md:text-[70px]">
                   CONTACTEZ-MOI
