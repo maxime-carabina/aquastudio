@@ -222,7 +222,7 @@ export default function ProjectPage() {
   ];
 
   return (
-    <main className="pt-11 lg:pt-12 lg:pb-36 text-f-primary">
+    <main className="pt-11 lg:pt-12 lg:pb-20 text-f-primary max-w-screen-2xl m-auto">
       <h1 className="mb-6 lg:mb-3 aqua-banner text-[36px] leading-[20px] lg:text-[80px] lg:leading-[135px] uppercase px-[22px] md:px-16 lg:px-28">
         Ce que je fais..
       </h1>

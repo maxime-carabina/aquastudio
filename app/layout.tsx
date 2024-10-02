@@ -40,7 +40,8 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </head>
-      <body className="bg-background max-w-screen-2xl m-auto text-f-primary">
+      <body className="bg-background text-f-primary">
+        {/* max-w-screen-2xl m-auto */}
         <SmoothScroller />
         {children}
         <Footer />

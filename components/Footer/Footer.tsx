@@ -19,57 +19,59 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="px-[22px] pt-10 pb-14 lg:px-28 lg:pt-[61px] lg:pb-32 bg-primary text-f-secondary flex flex-col lg:flex-row lg:items-start justify-between gap-12 lg:gap-0">
-      <div>
-        <p className="aqua-banner text-[30px] leading-[27px] lg:text-[50px] lg:leading-[45px] lg:mb-[54px]">
-          Aqua
-          <br />
-          studio
-        </p>
-        <ul className="hidden list-none aqua-caption lg:flex flex-col lg:gap-10">
-          <li>
+    <footer className="bg-primary">
+      <div className="px-[22px] pt-10 pb-14 lg:px-28 lg:pt-[61px] lg:pb-32 text-f-secondary flex flex-col lg:flex-row lg:items-start justify-between gap-12 lg:gap-0 max-w-screen-2xl m-auto">
+        <div>
+          <p className="aqua-banner text-[30px] leading-[27px] lg:text-[50px] lg:leading-[45px] lg:mb-[54px]">
+            Aqua
+            <br />
+            studio
+          </p>
+          <ul className="hidden list-none aqua-caption lg:flex flex-col lg:gap-10">
+            <li>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/aqua_stud_/"
+                className="relative aqua-caption text-[10px] lg:text-[20px] leading-[30px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/marine-perraud-b05a25199/"
+                className="relative aqua-caption text-[10px] lg:text-[20px] leading-[30px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
+              >
+                Linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="max-w-lg w-full mb-20 lg:mb-0">
+          <div className="mb-3 flex items-center justify-between aqua-caption text-[14px] leading-[20px] lg:text-[20px] lg:leading-[75px]">
+            <p>C’est l’heure de tenter l’expérience !</p>
+            <Time time={time} />
+          </div>
+          <div className="mb-14 lg:mb-0">
+            <EmailInput />
+          </div>
+          <div className="lg:hidden flex items-center justify-end gap-14 lg:gap-24">
             <a
               target="_blank"
               href="https://www.instagram.com/aqua_stud_/"
-              className="relative aqua-caption text-[10px] lg:text-[20px] leading-[30px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
+              className="relative aqua-caption text-[14px] lg:text-[20px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
             >
               Instagram
             </a>
-          </li>
-          <li>
             <a
               target="_blank"
               href="https://www.linkedin.com/in/marine-perraud-b05a25199/"
-              className="relative aqua-caption text-[10px] lg:text-[20px] leading-[30px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
+              className="relative aqua-caption text-[14px] lg:text-[20px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
             >
               Linkedin
             </a>
-          </li>
-        </ul>
-      </div>
-      <div className="max-w-lg w-full mb-20 lg:mb-0">
-        <div className="mb-3 flex items-center justify-between aqua-caption text-[14px] leading-[20px] lg:text-[20px] lg:leading-[75px]">
-          <p>C’est l’heure de tenter l’expérience !</p>
-          <Time time={time} />
-        </div>
-        <div className="mb-14 lg:mb-0">
-          <EmailInput />
-        </div>
-        <div className="lg:hidden flex items-center justify-end gap-14 lg:gap-24">
-          <a
-            target="_blank"
-            href="https://www.instagram.com/aqua_stud_/"
-            className="relative aqua-caption text-[14px] lg:text-[20px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
-          >
-            Instagram
-          </a>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/marine-perraud-b05a25199/"
-            className="relative aqua-caption text-[14px] lg:text-[20px] uppercase after:content-[''] after:w-0 after:h-[1.5px] after:bg-secondary after:absolute after:left-0 after:-bottom-1.5 after:transition-all duration-[550ms] after:pointer-events-none hover:after:w-full"
-          >
-            Linkedin
-          </a>
+          </div>
         </div>
       </div>
     </footer>
