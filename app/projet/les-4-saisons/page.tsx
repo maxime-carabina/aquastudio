@@ -286,7 +286,7 @@ function LeftColSticky() {
 export default function Page() {
   return (
     <div className="text-f-primary">
-      <div className="px-[22px] md:px-16 lg:px-28 mt-12 lg:mb-[70px] lg:mt-[74px] text-f-primary">
+      <div className="px-[22px] md:px-16 lg:px-28 mt-12 lg:mb-[70px] lg:mt-[74px] text-f-primary max-w-screen-2xl m-auto">
         <div className="mb-6 lg:mb-[70px] flex flex-wrap items-end justify-between gap-8 antialiased">
           <div>
             <h1 className="mb-8 lg:mb-[30px] aqua-banner text-[50px] leading-[50px] lg:text-[80px] lg:leading-[75px] uppercase max-w-[500px]">
@@ -331,7 +331,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="px-[22px] md:px-16 lg:px-[109px]">
+      <div className="px-[22px] md:px-16 lg:px-[109px] max-w-screen-2xl m-auto">
         <div className="lg:pt-[70px] pb-[70px] flex flex-wrap md:flex-nowrap justify-center gap-5 lg:gap-[50px] lg:border-b lg:border-t border-primary">
           <LeftColSticky />
           <RightColScrollable />
